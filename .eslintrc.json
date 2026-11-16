@@ -1,0 +1,70 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "prefer-const": "error",
+    "no-var": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.jsx"
+      ],
+      "rules": {
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            "extensions": [
+              ".jsx"
+            ]
+          }
+        ],
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ],
+  "plugins": [
+    "react-hooks"
+  ]
+}
