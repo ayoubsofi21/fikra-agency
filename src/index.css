@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (html.dark set by ThemeProvider + early inline script) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Semantic design tokens (indigo/violet/amber brand).
+ * Plain @theme (not inline) so utilities emit var(--color-*) references —
+ * ThemeProvider overrides these on <html> at runtime for light/dark.
+ */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-primary: #4F46E5;
+  --color-secondary: #7C3AED;
+  --color-accent: #F59E0B;
+  --color-background: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-surfaceAlt: #EDF2F7;
+  --color-text: #0F172A;
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+}
+
+/* Dark palette fallback (pre-hydration flash prevention; runtime inline vars win) */
+.dark {
+  --color-primary: #818CF8;
+  --color-secondary: #A78BFA;
+  --color-accent: #FBBF24;
+  --color-background: #0B1020;
+  --color-surface: #121936;
+  --color-surfaceAlt: #1E293B;
+  --color-text: #E2E8F0;
+  --color-muted: #94A3B8;
+  --color-border: #1E293B;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@layer base {
+  * {
+    border-color: color-mix(in srgb, currentColor, transparent 84%);
+  }
+
+  /* One icon stroke everywhere (unslop icons pass) */
+  svg.lucide {
+    stroke-width: 1.5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .bg-grid-small {
+    background-size: 28px 28px;
+    background-image: linear-gradient(to right, color-mix(in srgb, currentColor, transparent 96%) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, currentColor, transparent 96%) 1px, transparent 1px);
+  }
+
+  .dark .bg-grid-small {
+    background-image: linear-gradient(to right, color-mix(in srgb, currentColor, transparent 94%) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, currentColor, transparent 94%) 1px, transparent 1px);
+  }
+
+  .glass {
+    background: color-mix(in srgb, currentColor, transparent 93%);
+    backdrop-filter: blur(12px);
+  }
+
+  .dark .glass {
+    background: color-mix(in srgb, currentColor, transparent 93%);
+  }
+}
+
+@layer components {
+  .embla {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    display: flex;
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .embla__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    background: white;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .embla__button:hover {
+    opacity: 1;
+  }
+
+  .embla__button--prev {
+    left: 0;
+  }
+
+  .embla__button--next {
+    right: 0;
+  }
+
+  .embla__button::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .prose {
+    color: inherit;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Prevent horizontal page scroll from transient entrance animations (RTL-safe) */
+#root {
+  overflow-x: clip;
+}
