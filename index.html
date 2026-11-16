@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FIKRA Agency — From idea to digital reality</title>
+    <meta
+      name="description"
+      data-rh="true"
+      content="FIKRA Agency builds custom websites, reusable digital solutions, and SaaS-style tools for businesses worldwide. From Morocco to the world."
+    />
+    <meta name="author" content="FIKRA Agency" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fikra.agency/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FIKRA Agency" />
+    <meta property="og:title" data-rh="true" content="FIKRA Agency — From idea to digital reality" />
+    <meta
+      property="og:description"
+      data-rh="true"
+      content="Custom websites, reusable digital solutions, and SaaS-style tools — built for performance, accessibility, and growth."
+    />
+    <meta property="og:url" content="https://fikra.agency/" />
+    <meta property="og:image" data-rh="true" content="https://fikra.agency/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="ar_MA" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FIKRA Agency — From idea to digital reality" />
+    <meta
+      name="twitter:description"
+      content="Custom websites, reusable digital solutions, and SaaS-style tools for businesses worldwide."
+    />
+    <meta name="twitter:image" content="https://fikra.agency/og-image.png" />
+
+    <meta name="theme-color" content="#4F46E5" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hero montage LCP image (must match projects[0].image in src/data/mock.js) -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+      fetchpriority="high"
+    />
+
+    <script>
+      // Apply saved theme + language before first paint (no FOUC / RTL flash)
+      ;(function () {
+        try {
+          var root = document.documentElement
+
+          var theme = localStorage.getItem('fikra-theme')
+          try { theme = theme ? JSON.parse(theme) : null } catch (e) { /* raw legacy value */ }
+          if (theme !== 'dark' && theme !== 'light') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+          root.classList.toggle('dark', theme === 'dark')
+          root.style.colorScheme = theme
+
+          var lang = localStorage.getItem('fikra-language')
+          try { lang = lang ? JSON.parse(lang) : null } catch (e) { /* raw legacy value */ }
+          if (lang === 'fr' || lang === 'ar' || lang === 'en') {
+            root.lang = lang
+            root.dir = lang === 'ar' ? 'rtl' : 'ltr'
+          }
+        } catch (e) {
+          /* storage unavailable */
+        }
+      })()
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "FIKRA Agency",
+        "url": "https://fikra.agency",
+        "logo": "https://fikra.agency/favicon.svg",
+        "description": "We build custom websites, reusable digital solutions, and SaaS-style tools for businesses worldwide.",
+        "email": "contact@fikra.agency",
+        "telephone": "+212 6 00 00 00 00",
+        "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "MA"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/",
+          "https://github.com/",
+          "https://www.instagram.com/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

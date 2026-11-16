@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fikra.agency/sitemap.xml
+Last-modified: 2026-11-14
