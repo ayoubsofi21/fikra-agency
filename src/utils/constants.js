@@ -24,11 +24,14 @@ export const DEFAULT_LANGUAGE = 'en'
 
 /**
  * API configuration
- * Set VITE_USE_MOCK=true to return mock data with a fake delay.
- * Set VITE_API_URL to your real endpoint to bypass mocks.
+ *
+ * `VITE_API_URL` must include the version prefix (`/api/v1`). In development
+ * the Vite proxy forwards `/api` to the Laravel backend on port 8000, so the
+ * default works without extra configuration. `VITE_USE_MOCK=true` serves the
+ * bundled mock data with a simulated delay instead of calling the API.
  */
 export const API_CONFIG = {
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api/v1',
   timeout: 15000,
   useMock: import.meta.env.VITE_USE_MOCK === 'true',
 }

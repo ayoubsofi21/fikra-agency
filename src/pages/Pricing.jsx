@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 import { Container, Card, Badge, Button, Section, SectionTitle } from '@/components/ui'
 import { PageTransition } from '@/components/layout'
-import { pricing } from '@/data/mock'
+import { usePricing } from '@/hooks/useContent'
 import { cn } from '@/utils/helpers'
 
 const BillingToggle = ({ type, onChange }) => {
@@ -84,6 +84,7 @@ const PricingPage = () => {
   const lang = i18n.language
   const [billingType, setBillingType] = useState('monthly')
   const scrollRef = useRef(null)
+  const pricing = usePricing()
 
 
   return (

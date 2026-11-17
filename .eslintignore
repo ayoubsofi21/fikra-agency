@@ -2,3 +2,6 @@ dist/
 node_modules/
 coverage/
 *.css
+
+# Laravel backend (PHP project; its vendor assets are not frontend sources)
+backend/

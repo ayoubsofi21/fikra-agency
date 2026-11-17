@@ -16,7 +16,7 @@ import {
   TrendingUp,
 } from 'lucide-react'
 import { Container, Card, Badge, Button, Accordion } from '@/components/ui'
-import { services, faqs } from '@/data/mock'
+import { useFAQs, useServices } from '@/hooks/useContent'
 
 const iconMap = { Code2, ShoppingCart, Cloud, Palette, Server, Headphones, TrendingUp }
 
@@ -25,6 +25,8 @@ const ServiceDetail = () => {
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const services = useServices()
+  const faqs = useFAQs()
 
   const service = services.find((s) => s.slug === slug)
 

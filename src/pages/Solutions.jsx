@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 import { ArrowRight, Search } from 'lucide-react'
 import { PageTransition } from '@/components/layout'
 import { Container, Input, Tabs, Card, Badge } from '@/components/ui'
-import { solutions } from '@/data/mock'
+import { useSolutions } from '@/hooks/useContent'
 
 const SOLUTION_CATEGORIES = [
   { value: 'all', label: 'solutions.filterAll' },
@@ -70,6 +70,7 @@ const SolutionsPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const scrollRef = useRef(null)
+  const solutions = useSolutions()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
 

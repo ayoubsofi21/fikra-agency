@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 import { ExternalLink, Search } from 'lucide-react'
 import { PageTransition } from '@/components/layout'
 import { Container, Card, Input, Tabs } from '@/components/ui'
-import { projects } from '@/data/mock'
+import { useProjects } from '@/hooks/useContent'
 
 const PROJECT_CATEGORIES = [
   { value: 'all', label: 'portfolio.filterAll' },
@@ -55,6 +55,7 @@ const PortfolioPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const scrollRef = useRef(null)
+  const projects = useProjects()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
 

@@ -3,12 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { useRef } from 'react'
 import { Container, SectionTitle, Accordion } from '@/components/ui'
 import { PageTransition } from '@/components/layout'
-import { faqs } from '@/data/mock'
+import { useFAQs } from '@/hooks/useContent'
 
 const FAQPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const scrollRef = useRef(null)
+  const faqs = useFAQs()
 
 
   return (

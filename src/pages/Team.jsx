@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Mail } from 'lucide-react'
 import { Container, Card, Section } from '@/components/ui'
 import { PageTransition } from '@/components/layout'
-import { team } from '@/data/mock'
+import { useTeam } from '@/hooks/useContent'
 
 const SocialLink = ({ href, icon: Icon, label }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-surfaceAlt text-muted hover:text-primary hover:bg-primary/10 transition-colors">
@@ -46,6 +46,7 @@ const TeamPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const scrollRef = useRef(null)
+  const team = useTeam()
 
 
   return (

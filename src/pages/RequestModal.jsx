@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useTranslation } from 'react-i18next'
 import { Modal, Input, Textarea, Label, Select, Button, Flex } from '@/components/ui'
+import { sendSolutionRequest } from '@/services/api'
 
 // Error messages are i18n keys — translated at render time via t()
 const requestSchema = z.object({
@@ -21,6 +22,7 @@ export const RequestModal = ({ isOpen, onClose, solution, lang }) => {
   const { t } = useTranslation()
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
   const closeTimer = useRef(null)
 
   // Clean up the auto-close timer if the modal unmounts mid-flight
@@ -37,16 +39,27 @@ export const RequestModal = ({ isOpen, onClose, solution, lang }) => {
     },
   })
 
-  const onSubmit = async () => {
+  const onSubmit = async (values) => {
     setSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setSubmitting(false)
-    setSubmitted(true)
-    closeTimer.current = setTimeout(() => {
-      reset()
-      setSubmitted(false)
-      onClose()
-    }, 2000)
+    setError('')
+    try {
+      await sendSolutionRequest(solution.slug, {
+        name: values.name,
+        email: values.email,
+        company: values.company,
+        message: values.message,
+      })
+      setSubmitted(true)
+      closeTimer.current = setTimeout(() => {
+        reset()
+        setSubmitted(false)
+        onClose()
+      }, 2000)
+    } catch (err) {
+      setError(err?.message || t('common.error'))
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const budgets = [
@@ -134,6 +147,8 @@ export const RequestModal = ({ isOpen, onClose, solution, lang }) => {
               </div>
               {errors.terms && <p className="text-danger text-sm mt-1" role="alert">{t(errors.terms.message)}</p>}
             </div>
+
+            {error && <p className="text-danger text-sm" role="alert">{error}</p>}
 
             <Flex direction="column" gap="gap-4">
               <Button type="submit" size="lg" isLoading={submitting} className="w-full">

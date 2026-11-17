@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { Container, Section, SectionTitle, Card } from '@/components/ui'
-import { projects } from '@/data/mock'
+import { useProjects } from '@/hooks/useContent'
 
 export const ProjectsGrid = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const projects = useProjects()
 
   const featured = projects.slice(0, 3)
 

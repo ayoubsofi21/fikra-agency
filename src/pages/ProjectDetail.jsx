@@ -4,14 +4,14 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react'
 import { Container, Card, Badge, Button } from '@/components/ui'
-import { projects } from '@/data/mock'
+import { useProjects } from '@/hooks/useContent'
 
 const ProjectDetail = () => {
   const { slug } = useParams()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-
+  const projects = useProjects()
 
   const project = projects.find((p) => p.slug === slug)
   const index = projects.findIndex((p) => p.slug === slug)

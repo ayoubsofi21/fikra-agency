@@ -24,6 +24,13 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    proxy: {
+      // Laravel API (php artisan serve) — keeps the frontend same-origin in dev.
+      '/api': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+      },
+    },
   },
   build: {
     target: 'esnext',

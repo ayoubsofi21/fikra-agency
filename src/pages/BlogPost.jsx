@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Clock, Calendar, User, Share2, Check } from 'lucide-react'
 import { Container, Section } from '@/components/ui'
-import { posts } from '@/data/mock'
+import { usePosts } from '@/hooks/useContent'
 
 const BlogPost = () => {
   const { slug } = useParams()
@@ -13,6 +13,7 @@ const BlogPost = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const [copied, setCopied] = useState(false)
+  const posts = usePosts()
 
   const post = posts.find((p) => p.slug === slug)
 

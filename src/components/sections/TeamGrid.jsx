@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Container, Section, SectionTitle, Card } from '@/components/ui'
-import { team } from '@/data/mock'
+import { useTeam } from '@/hooks/useContent'
 
 export const TeamGrid = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const team = useTeam()
 
   return (
     <Section variant="surface" spacing="default">

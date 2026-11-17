@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Container, Section, SectionTitle, Card, Badge } from '@/components/ui'
-import { solutions } from '@/data/mock'
+import { useSolutions } from '@/hooks/useContent'
 
 const badgeMap = {
   'best-seller': 'bestseller',
@@ -16,6 +16,7 @@ const badgeMap = {
 export const SolutionsShowcase = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const solutions = useSolutions()
 
   const featured = solutions.filter((s) => s.badge || s.priceModel === 'subscription').slice(0, 3)
 

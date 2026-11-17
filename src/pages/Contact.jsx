@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Check, Cloud, Monitor, Package, Palette, Shapes, ShoppingCart, Upload } from 'lucide-react'
 import { Container, Input, Textarea, Label, Button, Card, SectionTitle } from '@/components/ui'
 import { PageTransition } from '@/components/layout'
+import { sendQuote } from '@/services/api'
 import { cn } from '@/utils/helpers'
 
 const steps = [
@@ -56,6 +57,7 @@ const ContactPage = () => {
   })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
   const scrollRef = useRef(null)
 
   const updateField = (field, value) => setFormData((prev) => ({ ...prev, [field]: value }))
@@ -67,9 +69,15 @@ const ContactPage = () => {
     if (currentStep !== steps.length - 1) return
     if (formData.honeypot) return
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1500))
-    setLoading(false)
-    setSuccess(true)
+    setError('')
+    try {
+      await sendQuote(formData)
+      setSuccess(true)
+    } catch (err) {
+      setError(err?.message || t('common.error'))
+    } finally {
+      setLoading(false)
+    }
   }
 
   const progressPercentage = ((currentStep + 1) / steps.length) * 100
@@ -279,6 +287,10 @@ const ContactPage = () => {
                       onChange={(e) => updateField('honeypot', e.target.value)}
                     />
                   </div>
+
+                  {error && (
+                    <p className="mt-6 text-sm text-danger" role="alert">{error}</p>
+                  )}
 
                   <div className="flex justify-between mt-8 pt-8 border-t border-border">
                     <Button

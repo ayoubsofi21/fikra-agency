@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { Compass, Heart, Users, Zap, ExternalLink } from 'lucide-react'
 import { Container, Card, Button, Section, SectionTitle } from '@/components/ui'
 import { PageTransition } from '@/components/layout'
-import { team } from '@/data/mock'
+import { useTeam } from '@/hooks/useContent'
 
 const values = [
   { icon: Heart, key: 'valuePassion' },
@@ -26,6 +26,7 @@ const TeamPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const scrollRef = useRef(null)
+  const team = useTeam()
 
 
   return (

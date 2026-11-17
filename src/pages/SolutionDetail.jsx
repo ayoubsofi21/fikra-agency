@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Check, ExternalLink, Star, CreditCard } from 'lucide-react'
 import { Container, Card, Badge, Button, Accordion } from '@/components/ui'
-import { solutions } from '@/data/mock'
+import { useSolutions } from '@/hooks/useContent'
 import { RequestModal } from './RequestModal'
 
 const badgeMap = {
@@ -21,6 +21,7 @@ const SolutionDetail = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const [showModal, setShowModal] = useState(false)
+  const solutions = useSolutions()
 
 
   const solution = solutions.find((s) => s.slug === slug)

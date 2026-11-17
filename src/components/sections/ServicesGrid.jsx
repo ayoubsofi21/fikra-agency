@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Code2, ShoppingCart, Cloud, Palette, Server, Headphones, TrendingUp } from 'lucide-react'
 import { Container, Section, SectionTitle, Card } from '@/components/ui'
 import { StaggerItem } from '@/components/layout'
-import { services } from '@/data/mock'
+import { useServices } from '@/hooks/useContent'
 import { cn } from '@/utils/helpers'
 
 const iconMap = {
@@ -42,6 +42,7 @@ const ServiceCard = ({ service, index, lang }) => {
 export const ServicesGrid = ({ showHeader = true }) => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const services = useServices()
 
   return (
     <Section variant="light" spacing="default">

@@ -1,12 +1,11 @@
 /**
  * API layer with axios.
- * Set VITE_USE_MOCK=true for mock data (with fake delay).
- * Set VITE_API_URL to real backend endpoint to use production data.
  *
- * Scaffolding for a future backend: nothing in the UI imports this yet —
- * pages read directly from `@/data/mock`. When a backend arrives, switch
- * VITE_USE_MOCK off and point VITE_API_URL at it; the functions below
- * already mirror the REST shape.
+ * The UI reads content through `@/hooks/useContent`, which seeds from the
+ * bundled mock data and refreshes from this client. Point `VITE_API_URL` at
+ * the Laravel API (`/api/v1` behind the dev proxy, or an absolute URL) and
+ * set `VITE_USE_MOCK=false` to use live data. Keeping `VITE_USE_MOCK=true`
+ * serves the mock responses with a simulated delay.
  */
 
 import axios from 'axios'
@@ -221,14 +220,48 @@ export async function getStats() {
 }
 
 /**
- * Contact / quote form submission
+ * Contact / quote form submission.
+ *
+ * `data` is the multi-step form state; `files` holds File objects. When
+ * attachments are present the payload is sent as multipart/form-data so the
+ * API can store them on its private disk.
  */
 export async function sendQuote(data) {
   if (API_CONFIG.useMock) {
     await delay(800 + Math.random() * 700)
     return { success: true, message: 'تم إرسال رسالتك بنجاح' }
   }
-  const res = await api.post(API_ENDPOINTS.contact, data)
+
+  const { files, ...fields } = data || {}
+  const hasFiles = Array.isArray(files) && files.length > 0
+
+  if (hasFiles) {
+    const form = new FormData()
+    Object.entries(fields).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== '') form.append(key, value)
+    })
+    files.forEach((file) => form.append('files[]', file))
+
+    const res = await api.post(API_ENDPOINTS.contact, form, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    })
+    return res.data
+  }
+
+  const res = await api.post(API_ENDPOINTS.contact, fields)
+  return res.data
+}
+
+/**
+ * "Request this solution" form on the solution detail page.
+ */
+export async function sendSolutionRequest(slug, data) {
+  if (API_CONFIG.useMock) {
+    await delay(800 + Math.random() * 700)
+    return { success: true }
+  }
+
+  const res = await api.post(`${API_ENDPOINTS.solutions}/${encodeURIComponent(slug)}/request`, data)
   return res.data
 }
 

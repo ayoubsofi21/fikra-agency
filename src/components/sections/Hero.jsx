@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Container, Section } from '@/components/ui'
-import { projects } from '@/data/mock'
-
-const [featured, secondary, tertiary] = projects
+import { useProjects } from '@/hooks/useContent'
 
 export const Hero = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const [featured, secondary, tertiary] = useProjects()
   const titleOf = (project) => project.title[lang] || project.title.en
   const categoryOf = (project) => t(`portfolio.category.${project.category}`)
 

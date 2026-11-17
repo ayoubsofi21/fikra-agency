@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { Search, Calendar, Clock, User } from 'lucide-react'
 import { PageTransition } from '@/components/layout'
 import { Container, Input, Tabs, Card } from '@/components/ui'
-import { posts } from '@/data/mock'
+import { usePosts } from '@/hooks/useContent'
 
 const BLOG_CATEGORIES = [
   { value: 'all', label: 'blog.categories.all' },
@@ -48,6 +48,7 @@ const BlogPostCard = ({ post, lang }) => {
 const BlogPage = () => {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const posts = usePosts()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
 
