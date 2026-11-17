@@ -1,0 +1,85 @@
+[
+  {
+    "slug": "logistics-fleet-tracker",
+    "category": "saas",
+    "title": {
+      "en": "Logistics Fleet Tracker",
+      "fr": "Suivi de flotte logistique",
+      "ar": "تتبع أسطول اللوجستيات"
+    },
+    "client_name": "Atlas Logistics",
+    "summary": {
+      "en": "A real-time fleet management platform tracking 400+ vehicles across Morocco with route optimization and driver analytics.",
+      "fr": "Une plateforme de gestion de flotte en temps réel suivant plus de 400 véhicules au Maroc, avec optimisation d'itinéraires et analyse des conducteurs.",
+      "ar": "منصة إدارة أسطول في الوقت الحقيقي تتتبع أكثر من 400 مركبة في المغرب مع تحسين المسارات وتحليلات السائقين."
+    },
+    "problem": {
+      "en": "Dispatchers managed 400+ vehicles with spreadsheets and phone calls, causing missed delivery windows and zero visibility into fuel usage.",
+      "fr": "Les expéditeurs géraient plus de 400 véhicules avec des tableurs et des appels téléphoniques, sans visibilité sur la consommation de carburant.",
+      "ar": "كان المشرفون يديرون أكثر من 400 مركبة بجداول بيانات ومكالمات هاتفية، دون أي رؤية لاستهلاك الوقود."
+    },
+    "solution": {
+      "en": "We built a Laravel + Vue platform with live GPS ingestion, geofencing alerts, and a dispatch dashboard that surfaces delays the moment they happen.",
+      "fr": "Nous avons construit une plateforme Laravel + Vue avec ingestion GPS en direct, alertes géorepérées et un tableau de bord qui signale les retards en temps réel.",
+      "ar": "بنينا منصة Laravel + Vue مع استقبال GPS مباشر وتنبيهات جغرافية ولوحة تحكم تظهر التأخيرات لحظة وقوعها."
+    },
+    "result": {
+      "en": "Delivery delays dropped 32% in three months and fuel costs fell 18% across the fleet.",
+      "fr": "Les retards de livraison ont baissé de 32% en trois mois et les coûts de carburant de 18% sur l'ensemble de la flotte.",
+      "ar": "انخفضت تأخيرات التسليم بنسبة 32% في ثلاثة أشهر وتكلفة الوقود بنسبة 18% على كامل الأسطول."
+    },
+    "technologies": ["Laravel", "Vue.js", "PostgreSQL", "Redis", "Mapbox"],
+    "live_url": null,
+    "completed_at": "2024-06-01",
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
+    "cover": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 5
+  },
+  {
+    "slug": "healthcare-booking-web",
+    "category": "web",
+    "title": {
+      "en": "Healthcare Booking Website",
+      "fr": "Site de réservation médical",
+      "ar": "موقع حجز المواعيد الطبية"
+    },
+    "client_name": "Clinique Al Amal",
+    "summary": {
+      "en": "A multilingual booking website for a 12-clinic network, handling appointments, doctor profiles, and SMS reminders in Arabic, French, and English.",
+      "fr": "Un site de réservation multilingue pour un réseau de 12 cliniques : rendez-vous, profils de médecins et rappels SMS en arabe, français et anglais.",
+      "ar": "موقع حجز متعدد اللغات لشبكة من 12 عيادة يشمل المواعيد وملفات الأطباء وتذكيرات الرسائل القصيرة بالعربية والفرنسية والإنجليزية."
+    },
+    "problem": {
+      "en": "Patients booked by phone during opening hours only, which led to long queues at reception and a 20% no-show rate.",
+      "fr": "Les patients réservaient par téléphone uniquement pendant les heures d'ouverture, ce qui créait de longues files d'attente et 20% d'absences.",
+      "ar": "كان المرضى يحجزون هاتفيًا خلال ساعات العمل فقط، مما أدى إلى طوابير طويلة في الاستقبال ونسبة حضور 20%."
+    },
+    "solution": {
+      "en": "A Next.js frontend on a Laravel API with a three-step booking flow, full ar/fr/en localization with RTL support, and automated SMS reminders.",
+      "fr": "Un frontend Next.js sur une API Laravel avec réservation en trois étapes, localisation complète ar/fr/en avec support RTL et rappels SMS automatiques.",
+      "ar": "واجهة Next.js فوق واجهة Laravel مع حجز من ثلاث خطوات ودعم كامل للعربية والفرنسية والإنجليزية مع اتجاه من اليمين وتذكيرات تلقائية."
+    },
+    "result": {
+      "en": "Online bookings now cover 78% of all appointments and no-shows fell below 9%.",
+      "fr": "Les réservations en ligne couvrent désormais 78% des rendez-vous et les absences sont passées sous 9%.",
+      "ar": "تغطي الحجوزات عبر الإنترنت الآن 78% من جميع المواعيد وانخفضت نسبة الغياب إلى أقل من 9%."
+    },
+    "technologies": ["Next.js", "Laravel", "MySQL", "Twilio"],
+    "live_url": null,
+    "completed_at": "2024-09-01",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    "cover": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 6
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "engineering",
+    "name": {
+      "en": "Engineering",
+      "fr": "Ingénierie",
+      "ar": "الهندسة"
+    }
+  },
+  {
+    "slug": "design",
+    "name": {
+      "en": "Design",
+      "fr": "Design",
+      "ar": "التصميم"
+    }
+  },
+  {
+    "slug": "e-commerce",
+    "name": {
+      "en": "E-commerce",
+      "fr": "E-commerce",
+      "ar": "التجارة الإلكترونية"
+    }
+  },
+  {
+    "slug": "ux",
+    "name": {
+      "en": "UX",
+      "fr": "UX",
+      "ar": "تجربة المستخدم"
+    }
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "slug": "invoice-management",
+    "category_slug": "business",
+    "title": {
+      "en": "Invoice Management System",
+      "fr": "Système de gestion de facturation",
+      "ar": "نظام إدارة الفواتير"
+    },
+    "short_description": "Create, send, and track invoices with automated reminders, recurring billing, and multi-currency support.",
+    "description": {
+      "en": "Create, send, and track invoices with automated reminders, recurring billing, and multi-currency support.",
+      "fr": "Créez, envoyez et suivez des factures avec rappels automatisés, facturation récurrente et multi-devises.",
+      "ar": "أنشئ وأرسل وتتبع الفواتير مع تذكيرات تلقائية وفواتير متكررة."
+    },
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Tailwind CSS"
+    ],
+    "demo_url": "https://invoice.demo.fikra.agency",
+    "pricing_model": "one_time",
+    "price": 899,
+    "currency": "USD",
+    "badge": "best-seller",
+    "type": "template",
+    "license_type": "single-domain",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 1
+  },
+  {
+    "slug": "leave-management",
+    "category_slug": "business",
+    "title": {
+      "en": "Leave Management",
+      "fr": "إدارة الإجازات",
+      "ar": "إدارة الإجازات"
+    },
+    "short_description": "Employee leave tracking with balances, approvals workflow, calendar view, and payroll-ready reports.",
+    "description": {
+      "en": "Employee leave tracking with balances, approvals workflow, calendar view, and payroll-ready reports.",
+      "fr": "Suivi des congés employés avec soldes, flux d'approbation, vue calendrier et rapports prêts pour la paie.",
+      "ar": "تتبع إجازات الموظفين مع الرصيد وعمليات الموافقة وعرض التقويم."
+    },
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "demo_url": "https://leave.demo.fikra.agency",
+    "pricing_model": "one_time",
+    "price": 749,
+    "currency": "USD",
+    "badge": "new",
+    "type": "template",
+    "license_type": "single-domain",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 2
+  },
+  {
+    "slug": "event-ticketing",
+    "category_slug": "events",
+    "title": {
+      "en": "Event Ticketing Platform",
+      "fr": "منصة بيع تذاكر",
+      "ar": "منصة بيع التذاكر"
+    },
+    "short_description": "Full ticketing solution: event creation, seat selection, QR check-in, analytics, and payment processing.",
+    "description": {
+      "en": "Full ticketing solution: event creation, seat selection, QR check-in, analytics, and payment processing.",
+      "fr": "Solution complète de billetterie : création d'événements, sélection de places, scan QR, analytique et paiements.",
+      "ar": "حل تذاكر كامل: إنشاء الحدث واختيار المقاعد وفحص QR والتحليلات."
+    },
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "demo_url": "https://events.demo.fikra.agency",
+    "pricing_model": "subscription",
+    "price": 49,
+    "currency": "USD",
+    "badge": "popular",
+    "type": "saas",
+    "license_type": "per-event",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 3
+  },
+  {
+    "slug": "resume-builder-saas",
+    "category_slug": "saas",
+    "title": {
+      "en": "Resume Builder SaaS",
+      "fr": "Générateur de CV en ligne",
+      "ar": "منصة بناء السيرة الذاتية"
+    },
+    "short_description": "Turnkey CV/Resume builder with ATS-friendly templates, live preview, and pay-per-download monetization.",
+    "description": {
+      "en": "Turnkey CV/Resume builder with ATS-friendly templates, live preview, and pay-per-download monetization.",
+      "fr": "Générateur de CV clé en main avec modèles compatibles ATS, aperçu en direct et monétisation à la commande.",
+      "ar": "منصة جاهزة لبناء السيرة الذاتية مع قوالب متوافقة مع ATS ومعاينة مباشرة."
+    },
+    "technologies": [
+      "React",
+      "Express",
+      "MongoDB",
+      "Stripe"
+    ],
+    "demo_url": "https://resume.demo.fikra.agency",
+    "pricing_model": "subscription",
+    "price": 29,
+    "currency": "USD",
+    "badge": "new",
+    "type": "saas",
+    "license_type": "white-label-option",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 4
+  },
+  {
+    "slug": "restaurant-ordering",
+    "category_slug": "food",
+    "title": {
+      "en": "Restaurant Ordering",
+      "fr": "طلب المطعم",
+      "ar": "طلب المطعم"
+    },
+    "short_description": "Online ordering for restaurants & patisseries: menu management, table booking, kitchen display, delivery tracking.",
+    "description": {
+      "en": "Online ordering for restaurants & patisseries: menu management, table booking, kitchen display, delivery tracking.",
+      "fr": "Commandes en ligne pour restaurants & pâtisseries : gestion du menu, réservations, affichage cuisine, suivi livraison.",
+      "ar": "طلبات عبر الإنترنت للمطاعم والمقاهي: إدارة القوائم والجدولة وعرض المطبخ."
+    },
+    "technologies": [
+      "React Native",
+      "Node.js",
+      "MySQL"
+    ],
+    "demo_url": "https://restaurant.demo.fikra.agency",
+    "pricing_model": "one_time",
+    "price": 1299,
+    "currency": "USD",
+    "badge": null,
+    "type": "template",
+    "license_type": "single-location",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 5
+  },
+  {
+    "slug": "medical-practice",
+    "category_slug": "health",
+    "title": {
+      "en": "Medical Practice Management",
+      "fr": "Gestion cabinet médical",
+      "ar": "إدارة الممارسة الطبية"
+    },
+    "short_description": "Full clinic management: appointments, e-prescriptions, patient records, billing, and telemedicine.",
+    "description": {
+      "en": "Full clinic management: appointments, e-prescriptions, patient records, billing, and telemedicine.",
+      "fr": "Gestion complète de clinique : rendez-vous, ordonnances électroniques, dossiers patients, facturation et télémédecine.",
+      "ar": "إدارة عيادة كاملة: المواعيد والوصفات الإلكترونية وسجلات المرضى."
+    },
+    "technologies": [
+      "React",
+      "Laravel",
+      "PostgreSQL"
+    ],
+    "demo_url": null,
+    "pricing_model": "custom",
+    "price": null,
+    "currency": "USD",
+    "badge": "coming-soon",
+    "type": "template",
+    "license_type": "per-clinic",
+    "rating": null,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 6
+  },
+  {
+    "slug": "ecommerce-store",
+    "category_slug": "commerce",
+    "title": {
+      "en": "E-commerce Store",
+      "fr": "متجر تجارة إلكترونية",
+      "ar": "متجر التجارة الإلكترونية"
+    },
+    "short_description": "Feature-rich online store: products, variants, cart, checkout, orders, and marketing integrations.",
+    "description": {
+      "en": "Feature-rich online store: products, variants, cart, checkout, orders, and marketing integrations.",
+      "fr": "Boutique en ligne riche en fonctionnalités : produits, variantes, panier, paiement, commandes et intégrations marketing.",
+      "ar": "متجر إلكتروني غني بالميزات: منتجات وvariants وسلة وشراء."
+    },
+    "technologies": [
+      "Shopify Liquid",
+      "React",
+      "Vite"
+    ],
+    "demo_url": "https://shop.demo.fikra.agency",
+    "pricing_model": "one_time",
+    "price": 1499,
+    "currency": "USD",
+    "badge": "best-seller",
+    "type": "template",
+    "license_type": "single-domain",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "is_featured": false,
+    "is_active": true,
+    "order": 7
+  }
+]

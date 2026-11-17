@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "debugging-slow-laravel-apis",
+    "category_slug": "engineering",
+    "author_name": {
+      "en": "Ayoub Sofi",
+      "fr": "Ayoub Sofi",
+      "ar": "أيوب صوفي"
+    },
+    "title": {
+      "en": "Debugging Slow Laravel APIs: A Practical Checklist",
+      "fr": "Déboguer une API Laravel lente : une checklist pratique",
+      "ar": "تصحيح بطء واجهات Laravel البرمجية: قائمة عملية"
+    },
+    "excerpt": {
+      "en": "Before you scale hardware, walk this checklist — it has cut our response times in half more than once.",
+      "fr": "Avant de faire monter le matériel, parcourez cette checklist — elle a plus d'une fois divisé nos temps de réponse par deux.",
+      "ar": "قبل توسيع الخادم، اتبع هذه القائمة — لقد قسّمت أوقات استجابتنا إلى النصف أكثر من مرة."
+    },
+    "content": {
+      "en": [
+        { "type": "p", "text": "A slow API is rarely slow everywhere. Before reaching for more hardware, walk this checklist — it has cut our response times in half more than once." },
+        { "type": "h2", "text": "1. Find the real bottleneck" },
+        { "type": "ul", "items": [
+          "Measure first: enable Telescope or debugbar locally and watch the timeline — never guess.",
+          "Enable the query log and hunt for N+1 queries hiding inside loops and collections.",
+          "Read the slow query log; a single unindexed join can dominate the whole request."
+        ] },
+        { "type": "h2", "text": "2. Cache what barely changes" },
+        { "type": "ol", "items": [
+          "Cache settings, menus, and translations with a short TTL — ten minutes is plenty.",
+          "Flush the cache when an admin saves; never cache stale data on purpose.",
+          "Use Redis in production; the file driver will fight you under concurrency."
+        ] },
+        { "type": "h2", "text": "3. Offload the work that can wait" },
+        { "type": "ul", "items": [
+          "Queue emails, CSV exports, and webhooks with the database queue driver.",
+          "Keep the HTTP request down to reading input, validating, and responding.",
+          "Watch the failed_jobs table daily — silent failures become slow failures."
+        ] },
+        { "type": "p", "text": "Run this loop on your slowest endpoint first. Most 'we need to scale' conversations end with a missing index." }
+      ],
+      "fr": [
+        { "type": "p", "text": "Une API lente est rarement lente partout. Avant de changer de matériel, parcourez cette checklist — elle a plus d'une fois divisé nos temps de réponse par deux." },
+        { "type": "h2", "text": "1. Trouvez le vrai goulot d'étranglement" },
+        { "type": "ul", "items": [
+          "Mesurez d'abord : activez Telescope ou debugbar en local et observez la chronologie — ne devinez jamais.",
+          "Activez le journal des requêtes et traquez les requêtes N+1 cachées dans les boucles.",
+          "Lisez le journal des requêtes lentes ; une seule jointure non indexée peut dominer toute la requête."
+        ] },
+        { "type": "h2", "text": "2. Mettez en cache ce qui change peu" },
+        { "type": "ol", "items": [
+          "Cachez les réglages, les menus et les traductions avec un court TTL — dix minutes suffisent.",
+          "Videz le cache lors d'une sauvegarde admin ; ne gardez jamais des données obsolètes volontairement.",
+          "Utilisez Redis en production ; le pilote de fichiers vous freinera en concurrence."
+        ] },
+        { "type": "h2", "text": "3. Délestagez ce qui peut attendre" },
+        { "type": "ul", "items": [
+          "Mettez en file les e-mails, les exports CSV et les webhooks avec le pilote de file de base de données.",
+          "Limitez la requête HTTP à la lecture, la validation et la réponse.",
+          "Surveillez la table failed_jobs quotidiennement — les échecs silencieux deviennent des lenteurs."
+        ] },
+        { "type": "p", "text": "Appliquez cette boucle sur votre point d'entrée le plus lent. La plupart des discussions « il faut scaler » finissent par une index manquante." }
+      ],
+      "ar": [
+        { "type": "p", "text": "نادرًا ما تكون الواجهة البرمجية بطيئة في كل مكان. قبل توسيع الخادم، اتبع هذه القائمة — لقد قسّمت أوقات استجابتنا إلى النصف أكثر من مرة." },
+        { "type": "h2", "text": "1. اعثر على عنق الزجاجة الحقيقي" },
+        { "type": "ul", "items": [
+          "قِس أولًا: فعّل Telescope أو debugbar محليًا وراقب الخط الزمني — لا تخمن أبدًا.",
+          "فعّل سجل الاستعلامات وابحث عن استعلامات N+1 مخفية داخل الحلقات.",
+          "اقرأ سجل الاستعلامات البطيئة؛ ضمّة واحدة غير مفهرسة قد تسيطر على الطلب بالكامل."
+        ] },
+        { "type": "h2", "text": "2. خزّن ما نادر التغيير" },
+        { "type": "ol", "items": [
+          "خزّن الإعدادات والقوائم والترجمات بمدة قصيرة — عشر دقائق تكفي.",
+          "أفرغ التخزين عند حفظ المشرف؛ لا تحفظ بيانات قديمة عن عمد.",
+          "استخدم Redis في الإنتاج؛ محرك الملفات سيعرقلك عند التزامن."
+        ] },
+        { "type": "h2", "text": "3. أعد الأعمال التي يمكن أن تنتظر" },
+        { "type": "ul", "items": [
+          "ضع رسائل البريد وتصدير CSV و-webhooks في قائمة الانتظار بمحرك قاعدة البيانات.",
+          "أبقِ الطلب(HTTP) على القراءة والتحقق والاستجابة فقط.",
+          "راقب جدول failed_jobs يوميًا — الفشل الصامت يصبح بطء."
+        ] },
+        { "type": "p", "text": "طبق هذا الدور على أبطأ نقطة دخول لديك أولًا. معظم نقاشات «نحتاج للتوسع» تنتهي بفهرس مفقود." }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
+    "reading_time": 7,
+    "status": "published",
+    "published_at": "2025-06-12",
+    "seo_title": null,
+    "seo_description": null
+  },
+  {
+    "slug": "design-systems-for-startups",
+    "category_slug": "design",
+    "author_name": {
+      "en": "Ayoub Sofi",
+      "fr": "Ayoub Sofi",
+      "ar": "أيوب صوفي"
+    },
+    "title": {
+      "en": "Design Systems for Startups: Ship Faster Without Losing Consistency",
+      "fr": "Design systems pour startups : livrez plus vite sans perdre en cohérence",
+      "ar": "أنظمة التصميم للشركات الناشئة: أطلق أسرع دون فقدان الاتساق"
+    },
+    "excerpt": {
+      "en": "A design system does not need a team of ten. It needs a small set of decisions everyone respects.",
+      "fr": "Un design system n'a pas besoin de dix personnes. Il a besoin de quelques décisions que tout le monde respecte.",
+      "ar": "لا يحتاج نظام التصميم إلى فريق من عشرة أشخاص، بل إلى قرارات قليلة يحترمها الجميع."
+    },
+    "content": {
+      "en": [
+        { "type": "p", "text": "A design system does not need a team of ten. It needs a small set of decisions everyone respects — written down, versioned, and enforced by the code you share." },
+        { "type": "h2", "text": "Start with three pillars" },
+        { "type": "ul", "items": [
+          "A type scale: four sizes, two weights, and one line-height rhythm.",
+          "A color set: one brand, one surface, and a semantic set for success, warning, danger, and muted text.",
+          "A spacing scale: a single base unit multiplied by four, used everywhere."
+        ] },
+        { "type": "h2", "text": "Document decisions, not pixels" },
+        { "type": "p", "text": "Write down why a button is 44 pixels tall and why modals close on Escape. Future-you will defend the system far better with reasons than with measurements." },
+        { "type": "h2", "text": "Grow it with the product" },
+        { "type": "ol", "items": [
+          "Add a component only after the third time you reuse it.",
+          "Keep the changelog in the same repository as the components.",
+          "Review the system in the same sprint as the feature that stretched it."
+        ] },
+        { "type": "p", "text": "Consistency is a compounding asset. The earlier the decisions are written down, the cheaper every future screen becomes." }
+      ],
+      "fr": [
+        { "type": "p", "text": "Un design system n'a pas besoin de dix personnes. Il a besoin de quelques décisions que tout le monde respecte — écrites, versionnées et appliquées par le code partagé." },
+        { "type": "h2", "text": "Commencez par trois piliers" },
+        { "type": "ul", "items": [
+          "Une échelle typographique : quatre tailles, deux graisses et un rythme d'interligne.",
+          "Un jeu de couleurs : une marque, une surface et un jeu sémantique pour succès, avertissement, danger et texte atténué.",
+          "Une échelle d'espacement : une unité de base multipliée par quatre, utilisée partout."
+        ] },
+        { "type": "h2", "text": "Documentez les décisions, pas les pixels" },
+        { "type": "p", "text": "Écrivez pourquoi un bouton fait 44 pixels de haut et pourquoi les modales se ferment sur Échap. Vous défendrez bien mieux le système avec des raisons qu'avec des mesures." },
+        { "type": "h2", "text": "Faites-le grandir avec le produit" },
+        { "type": "ol", "items": [
+          "Ajoutez un composant seulement après la troisième réutilisation.",
+          "Gardez le changelog dans le même dépôt que les composants.",
+          "Revoyez le système dans le même sprint que la fonctionnalité qui l'a étiré."
+        ] },
+        { "type": "p", "text": "La cohérence est un actif qui compose. Plus les décisions sont écrites tôt, moins chaque futur écran coûte cher." }
+      ],
+      "ar": [
+        { "type": "p", "text": "لا يحتاج نظام التصميم إلى فريق من عشرة أشخاص، بل إلى قرارات قليلة يحترمها الجميع — مكتوبة ومحفوظة ومطبَّقة في الكود المشترك." },
+        { "type": "h2", "text": "ابدأ بثلاث ركائز" },
+        { "type": "ul", "items": [
+          "مقياس خطوط: أربعة أحجام ووزنان وإيقاع واحد لارتفاع السطر.",
+          "مجموعة ألوان: لون واحد للعلامة وسطح واحد ومجموعة دلالية للنجاح والتحذير والخطر والنص الخافت.",
+          "مقياس مسافات: وحدة أساسية واحدة مضروبة في أربعة، تُستخدم في كل مكان."
+        ] },
+        { "type": "h2", "text": "وثّق القرارات لا البكسل" },
+        { "type": "p", "text": "اكتب سبب ارتفاع الزر 44 بكسل ولماذا تُغلق النوافذ المنبثقة بمفتاح Escape. ستكون دفاعك عن النظام أقوى بالأسباب من القياسات." },
+        { "type": "h2", "text": "اجعله ينمو مع المنتج" },
+        { "type": "ol", "items": [
+          "أضف مكوّنًا بعد الاستخدام الثالث فقط.",
+          "احتفظ بسجل التغييرات في نفس المستودع مع المكوّنات.",
+          "راجع النظام في نفس Sprint مع الميزة التي وسعته."
+        ] },
+        { "type": "p", "text": "الاتساق أصل يتكاثر. كلما كُتبت القرارات مبكرًا، أصبح كل شاشة مستقبلية أرخص." }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    "reading_time": 6,
+    "status": "published",
+    "published_at": "2025-05-20",
+    "seo_title": null,
+    "seo_description": null
+  }
+]

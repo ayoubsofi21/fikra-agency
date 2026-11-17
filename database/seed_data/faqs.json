@@ -1,0 +1,92 @@
+[
+  {
+    "group": "general",
+    "question": {
+      "en": "How long does a typical project take?",
+      "fr": "Combien de temps prend un projet typique ?",
+      "ar": "كم يستغرق المشروع النموذجي؟"
+    },
+    "answer": {
+      "en": "Small websites: 2–4 weeks. E-commerce stores: 3–6 weeks. Custom platforms/SaaS: 6–16 weeks. Every project is scoped during our free consultation.",
+      "fr": "Sites web : 2–4 semaines. Boutiques e-commerce : 3–6 semaines. Plateformes sur mesure : 6–16 semaines.",
+      "ar": "مواقع صغيرة: 2-4 أسابيع. متاجر إلكترونية: 3-6 أسابيع. منصات مخصصة: 6-16 أسبوعاً."
+    },
+    "order": 1,
+    "is_active": true
+  },
+  {
+    "group": "general",
+    "question": {
+      "en": "Do you work with clients outside Morocco?",
+      "fr": "Travaillez-vous avec des clients hors du Maroc ?",
+      "ar": "هل تعملون مع عملاء خارج المغرب؟"
+    },
+    "answer": {
+      "en": "Yes! We are fully remote and have delivered projects to clients across Europe, North America, and the Middle East.",
+      "fr": "Oui, nous sommes 100% à distance et avons livré des projets en Europe, Amérique du Nord et au Moyen-Orient.",
+      "ar": "نعم! نحن عن بعد بالكامل وقد أسلفنا مشاريع لعملاء في أوروبا وأمريكا والشرق الأوسط."
+    },
+    "order": 2,
+    "is_active": true
+  },
+  {
+    "group": "services",
+    "question": {
+      "en": "Can I customize a ready-made solution?",
+      "fr": "Puis-je personnaliser une solution toute faite ?",
+      "ar": "هل يمكنني تخصيص حل جاهز؟"
+    },
+    "answer": {
+      "en": "Absolutely. Every solution is fully open and we offer customization as an add-on service to match your brand and workflows.",
+      "fr": "Absolument. Chaque solution est ouverte et nous offrons de la personnalisation en service optionnel.",
+      "ar": "بالتأكيد! كل حل مفتوح بالكامل ونقدم التخصيص كخدمة إضافية."
+    },
+    "order": 3,
+    "is_active": true
+  },
+  {
+    "group": "pricing",
+    "question": {
+      "en": "What is your payment terms?",
+      "fr": "Quels sont vos termes de paiement ?",
+      "ar": "ما هي شروط الدفع الخاصة بكم؟"
+    },
+    "answer": {
+      "en": "We work with a milestone-based payment structure: 30% upfront, then 40% at design approval, and 30% at launch. Custom work and solutions can vary.",
+      "fr": "Structure par jalons : 30% à la commande, 40% à l'approbation du design, 30% au lancement.",
+      "ar": "نعمل بهيكل مدفوعات بناءً على المعالم: 30% مقدماً ثم 40% عند الموافقة على التصميم و30% عند الإطلاق."
+    },
+    "order": 4,
+    "is_active": true
+  },
+  {
+    "group": "services",
+    "question": {
+      "en": "Do you offer post-launch support?",
+      "fr": "Proposez-vous un support après le lancement ?",
+      "ar": "هل تقدمون دعم ما بعد الإطلاق؟"
+    },
+    "answer": {
+      "en": "Yes. All projects include 30 days of free post-launch support, and we offer ongoing maintenance plans from $299/month.",
+      "fr": "Oui. Tous les projets incluent 30 jours de support gratuit, et nous proposons des plans de maintenance à partir de 299$/mois.",
+      "ar": "نعم! جميع المشاريع تتضمن 30 يوماً من الدعم المجاني وخطط صيانة مستمرة من 299 دولار شهرياً."
+    },
+    "order": 5,
+    "is_active": true
+  },
+  {
+    "group": "general",
+    "question": {
+      "en": "Will my website be fast and SEO-friendly?",
+      "fr": "Mon site sera-t-il rapide et optimisé SEO ?",
+      "ar": "هل سيكون موقعي سريعاً ومتوافقاً مع محركات البحث؟"
+    },
+    "answer": {
+      "en": "Performance is built in. We target Lighthouse scores of 90+, follow SEO best practices, and optimize images, code, and infrastructure.",
+      "fr": "La performance est intégrée. Nous visez des scores Lighthouse de 90+ et optimisons tout.",
+      "ar": "الأداء مُدمج. نهدف إلى نتائج Lighthouse 90+ ونحسن الصور والكود والبنية."
+    },
+    "order": 6,
+    "is_active": true
+  }
+]

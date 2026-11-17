@@ -1,0 +1,73 @@
+{
+  "site": {
+    "name": "FIKRA Agency",
+    "tagline": "From idea to digital reality",
+    "description": "We build custom websites, reusable digital solutions, and SaaS-style tools for businesses worldwide. From Morocco to the world.",
+    "email": "contact@fikra.agency",
+    "phone": "+212 6 00 00 00 00",
+    "location": "Morocco — remote-friendly, working with clients worldwide",
+    "workingHours": "Mon–Fri, 9:00–18:00 (GMT+0)",
+    "locale": "en-US"
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/fikra-agency",
+      "icon": "GitHub"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/fikra-agency",
+      "icon": "LinkedIn"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/fikra.agency",
+      "icon": "Instagram"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/fikra.agency",
+      "icon": "Facebook"
+    }
+  ],
+  "whatsapp": "212600000000",
+  "stats": [
+    {
+      "value": 87,
+      "suffix": {
+        "en": "+",
+        "fr": "+",
+        "ar": "+"
+      },
+      "label": "projects_completed"
+    },
+    {
+      "value": 42,
+      "suffix": {
+        "en": "+",
+        "fr": "+",
+        "ar": "+"
+      },
+      "label": "clients_trusted"
+    },
+    {
+      "value": 7,
+      "suffix": {
+        "en": "",
+        "fr": "",
+        "ar": ""
+      },
+      "label": "ready_made_solutions"
+    },
+    {
+      "value": 5,
+      "suffix": {
+        "en": "+",
+        "fr": "+",
+        "ar": "+"
+      },
+      "label": "years_experience"
+    }
+  ]
+}

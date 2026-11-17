@@ -1,0 +1,191 @@
+[
+  {
+    "key": "starter",
+    "name": {
+      "en": "Starter",
+      "fr": "Démarrage",
+      "ar": "البداية"
+    },
+    "description": null,
+    "tagline": {
+      "en": "Perfect for landing pages, portfolios, and small business sites",
+      "fr": "Parfait pour les pages de destination, portfolios et sites d'entreprise",
+      "ar": "مثالي لصفحات الهبوط والمعارض والمواقع الصغيرة"
+    },
+    "cta": {
+      "en": "Start a project",
+      "fr": "Démarrer un projet",
+      "ar": "ابدأ مشروعاً"
+    },
+    "price_monthly": 499,
+    "price_yearly": 399,
+    "price_one_time": 799,
+    "currency": "USD",
+    "features": [
+      {
+        "en": "Up to 5 pages",
+        "fr": "Jusqu'à 5 pages",
+        "ar": "حتى 5 صفحات"
+      },
+      {
+        "en": "Responsive design",
+        "fr": "Design responsive",
+        "ar": "تصميم متجاوب"
+      },
+      {
+        "en": "Basic SEO setup",
+        "fr": "Configuration SEO de base",
+        "ar": "إعداد SEO أساسي"
+      },
+      {
+        "en": "Contact form",
+        "fr": "Formulaire de contact",
+        "ar": "نموذج اتصال"
+      },
+      {
+        "en": "30-day support",
+        "fr": "Support 30 jours",
+        "ar": "دعم 30 يوماً"
+      },
+      {
+        "en": "CMS training",
+        "fr": "Formation CMS",
+        "ar": "تدريب CMS"
+      }
+    ],
+    "is_popular": false,
+    "order": 1,
+    "is_active": true
+  },
+  {
+    "key": "business",
+    "name": {
+      "en": "Business",
+      "fr": "Entreprise",
+      "ar": "الأعمال"
+    },
+    "description": null,
+    "tagline": {
+      "en": "For growing businesses that need an online presence that converts",
+      "fr": "Pour les entreprises en croissance ayant besoin d'une présence en ligne",
+      "ar": "للشركات النامية التي تحتاج حضوراً رقمياً"
+    },
+    "cta": {
+      "en": "Start a project",
+      "fr": "Démarrer un projet",
+      "ar": "ابدأ مشروعاً"
+    },
+    "price_monthly": 1499,
+    "price_yearly": 1199,
+    "price_one_time": 2299,
+    "currency": "USD",
+    "features": [
+      {
+        "en": "Up to 15 pages",
+        "fr": "Jusqu'à 15 pages",
+        "ar": "حتى 15 صفحة"
+      },
+      {
+        "en": "Custom design & UI/UX",
+        "fr": "Design & UI/UX sur mesure",
+        "ar": "تصميم وتصميم واجهة مخصص"
+      },
+      {
+        "en": "Advanced SEO",
+        "fr": "SEO avancé",
+        "ar": "SEO متقدم"
+      },
+      {
+        "en": "Blog & CMS",
+        "fr": "Blog & CMS",
+        "ar": "مدونة و CMS"
+      },
+      {
+        "en": "Analytics integration",
+        "fr": "Intégration analytique",
+        "ar": "تكامل تحليلي"
+      },
+      {
+        "en": "90-day support",
+        "fr": "Support 90 jours",
+        "ar": "دعم 90 يوماً"
+      },
+      {
+        "en": "Performance optimization",
+        "fr": "Optimisation des performances",
+        "ar": "تحسين الأداء"
+      },
+      {
+        "en": "Priority support",
+        "fr": "Support prioritaire",
+        "ar": "دعم ذو أولوية"
+      }
+    ],
+    "is_popular": true,
+    "order": 2,
+    "is_active": true
+  },
+  {
+    "key": "custom",
+    "name": {
+      "en": "Custom",
+      "fr": "Sur mesure",
+      "ar": "مخصص"
+    },
+    "description": null,
+    "tagline": {
+      "en": "For platforms, SaaS products, and complex business needs",
+      "fr": "Pour les plateformes, produits SaaS et besoins complexes",
+      "ar": "للمنصات ومنتجات SaaS والاحتياجات المعقدة"
+    },
+    "cta": {
+      "en": "Request a quote",
+      "fr": "Demander un devis",
+      "ar": "اطلب عرض سعر"
+    },
+    "price_monthly": null,
+    "price_yearly": null,
+    "price_one_time": null,
+    "currency": "USD",
+    "features": [
+      {
+        "en": "Unlimited pages",
+        "fr": "Pages illimitées",
+        "ar": "صفحات غير محدودة"
+      },
+      {
+        "en": "Full-stack development",
+        "fr": "Développement full-stack",
+        "ar": "تطوير كامل الواجهة"
+      },
+      {
+        "en": "Custom API & integrations",
+        "fr": "API & intégrations sur mesure",
+        "ar": "واجهة API وتكاملات مخصصة"
+      },
+      {
+        "en": "Multi-language support",
+        "fr": "Support multilingue",
+        "ar": "دعم متعدد اللغات"
+      },
+      {
+        "en": "Team training & docs",
+        "fr": "Formation & documentation",
+        "ar": "تدريب وتوثيق"
+      },
+      {
+        "en": "Dedicated project manager",
+        "fr": "Chef de projet dédié",
+        "ar": "مدير مشروع مخصص"
+      },
+      {
+        "en": "SLA & priority support",
+        "fr": "SLA & support prioritaire",
+        "ar": "اتفاقية مستوى خدمة"
+      }
+    ],
+    "is_popular": false,
+    "order": 3,
+    "is_active": true
+  }
+]

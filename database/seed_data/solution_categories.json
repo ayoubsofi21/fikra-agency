@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "business",
+    "name": {
+      "en": "Business",
+      "fr": "Entreprise",
+      "ar": "الأعمال"
+    }
+  },
+  {
+    "slug": "events",
+    "name": {
+      "en": "Events",
+      "fr": "Événements",
+      "ar": "الفعاليات"
+    }
+  },
+  {
+    "slug": "saas",
+    "name": {
+      "en": "SaaS",
+      "fr": "SaaS",
+      "ar": "SaaS"
+    }
+  },
+  {
+    "slug": "food",
+    "name": {
+      "en": "Food & Restaurants",
+      "fr": "Restauration",
+      "ar": "المطاعم"
+    }
+  },
+  {
+    "slug": "health",
+    "name": {
+      "en": "Health",
+      "fr": "Santé",
+      "ar": "الصحة"
+    }
+  },
+  {
+    "slug": "commerce",
+    "name": {
+      "en": "Commerce",
+      "fr": "Commerce",
+      "ar": "التجارة"
+    }
+  }
+]
