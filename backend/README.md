@@ -72,7 +72,8 @@ php artisan migrate --seed
 
 ## Connecting the React frontend
 
-The frontend lives in a separate repository. Its API layer is toggled by two Vite variables:
+The backend lives in `backend/` of this monorepo, alongside the React frontend at
+the repository root. The frontend's API layer is toggled by two Vite variables:
 
 ```dotenv
 # frontend .env.local
