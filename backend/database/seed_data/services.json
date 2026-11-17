@@ -1,0 +1,308 @@
+[
+  {
+    "slug": "custom-web-development",
+    "icon": "Code2",
+    "category": "development",
+    "title": {
+      "en": "Custom Web Development",
+      "fr": "Développement web sur mesure",
+      "ar": "تطوير ويب مخصص"
+    },
+    "short_description": {
+      "en": "Tailor-made sites and apps built to grow with your business",
+      "fr": "Sites et applications sur mesure conçus pour grandir avec votre entreprise",
+      "ar": "مواقع وتطبيقات مخصصة مصممة لتنمو مع عملك"
+    },
+    "description": {
+      "en": "Bespoke websites and web applications built for performance, accessibility, and growth — from landing pages to complex platforms.",
+      "fr": "Sites web et applications web conçus pour la performance, l'accessibilité et la croissance — des pages de destination aux plateformes complexes.",
+      "ar": "مواقع وتطبيقات ويب مصممة للأداء والوصول والنمو — من صفحات الهبوط إلى المنصات المعقدة."
+    },
+    "deliverables": {
+      "en": [
+        "Responsive, mobile-first design",
+        "Clean, documented code",
+        "SEO-ready structure",
+        "Fast, accessible UX",
+        "CMS integration if needed"
+      ]
+    },
+    "technologies": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "PHP",
+      "Laravel",
+      "Tailwind"
+    ],
+    "timeline": {
+      "en": "2–8 weeks"
+    },
+    "price_model": "custom",
+    "price_from": 2000,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": true,
+    "is_active": true,
+    "order": 1
+  },
+  {
+    "slug": "e-commerce",
+    "icon": "ShoppingCart",
+    "category": "commerce",
+    "title": {
+      "en": "E-commerce",
+      "fr": "التجارة الإلكترونية",
+      "ar": "التجارة الإلكترونية"
+    },
+    "short_description": {
+      "en": "Conversion-focused online stores",
+      "fr": "متاجر عبر الإنترنت مركزة على التحويل",
+      "ar": "متاجر إلكترونية تركز على التحويل"
+    },
+    "description": {
+      "en": "Online stores that convert — product management, secure payments, inventory tracking, and analytics built in.",
+      "fr": "Boutiques en ligne qui convertissent — gestion des produits, paiements sécurisés, suivi des stocks et analytiques intégrés.",
+      "ar": "متاجر عبر الإنترنت تحول الزوار إلى عملاء — إدارة المنتجات ودفع آمن وتتبع المخزون."
+    },
+    "deliverables": {
+      "en": [
+        "Product catalog & search",
+        "Secure payment gateway",
+        "Order & inventory management",
+        "Customer accounts"
+      ]
+    },
+    "technologies": [
+      "Shopify",
+      "WooCommerce",
+      "React",
+      "Node.js"
+    ],
+    "timeline": {
+      "en": "3–6 weeks"
+    },
+    "price_model": "license",
+    "price_from": 1500,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": true,
+    "is_active": true,
+    "order": 2
+  },
+  {
+    "slug": "custom-platforms-saas",
+    "icon": "Cloud",
+    "category": "platform",
+    "title": {
+      "en": "Custom Platforms & SaaS",
+      "fr": "المنصات المخصصة وSaaS",
+      "ar": "المنصات المخصصة وSaaS"
+    },
+    "short_description": {
+      "en": "Scalable systems for SaaS and business tools",
+      "fr": "Systèmes évolutifs pour SaaS et outils métier",
+      "ar": "أنظمة قابلة للتوسع لـ SaaS وأدوات الأعمال"
+    },
+    "description": {
+      "en": "Scalable backend systems and cloud platforms designed for multi-tenant SaaS products and internal business tools.",
+      "fr": "Systèmes backend évolutifs et plateformes cloud conçus pour les produits SaaS multi-locataires et les outils métier internes.",
+      "ar": "أنظمة خلفية قابلة للتوسع ومنصات سحابية مصممة لمنتجات SaaS والأدوات الداخلية."
+    },
+    "deliverables": {
+      "en": [
+        "REST / GraphQL API",
+        "Multi-tenant architecture",
+        "Auth & role management",
+        "Database design & migration"
+      ]
+    },
+    "technologies": [
+      "Node.js",
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "timeline": {
+      "en": "6–16 weeks"
+    },
+    "price_model": "custom",
+    "price_from": 5000,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": true,
+    "is_active": true,
+    "order": 3
+  },
+  {
+    "slug": "ui-ux-design",
+    "icon": "Palette",
+    "category": "design",
+    "title": {
+      "en": "UI/UX Design",
+      "fr": "تصميم واجهة وتجربة المستخدم",
+      "ar": "تصميم واجهة وتجربة المستخدم"
+    },
+    "short_description": {
+      "en": "Research-led design that users love",
+      "fr": "Conduite par la recherche, design que les utilisateurs adorent",
+      "ar": "تصميم يقوده البحث يحبه المستخدمون"
+    },
+    "description": {
+      "en": "Human-centered design: user research, wireframes, prototypes, and polished visual designs that make products delightful.",
+      "fr": "Conception centrée sur l'humain : recherches utilisateurs, maquettes, prototypes et designs visuels aboutis.",
+      "ar": "تصميم يركز على الإنسان: أبحاث المستخدمين والرسومات والنماذج الأولية والتصاميم البصرية."
+    },
+    "deliverables": {
+      "en": [
+        "User research",
+        "Wireframes & prototypes",
+        "Design system",
+        "High-fidelity mockups"
+      ]
+    },
+    "technologies": [
+      "Figma",
+      "Framer"
+    ],
+    "timeline": {
+      "en": "2–6 weeks"
+    },
+    "price_model": "custom",
+    "price_from": 1200,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": false,
+    "is_active": true,
+    "order": 4
+  },
+  {
+    "slug": "rest-api-backend",
+    "icon": "Server",
+    "category": "backend",
+    "title": {
+      "en": "REST API & Backend",
+      "fr": "REST API والخلفية",
+      "ar": "REST API والواجهة الخلفية"
+    },
+    "short_description": {
+      "en": "Secure APIs for apps and integrations",
+      "fr": "APIs sécurisées pour applications et intégrations",
+      "ar": "واجهات برمجة تطبيقات آمنة للتطبيقات والتكاملات"
+    },
+    "description": {
+      "en": "Robust, secure, and well-documented APIs that power mobile apps, frontends, and third-party integrations.",
+      "fr": "API robustes, sécurisées et bien documentées qui alimentent les applications mobiles, les interfaces et les intégrations tierces.",
+      "ar": "واجهات برمجة تطبيقات قوية وآمنة ومتوثقة تغذي تطبيقات الهاتف وأوجه أمامية."
+    },
+    "deliverables": {
+      "en": [
+        "REST / GraphQL design",
+        "Authentication & authorization",
+        "Scalable database",
+        "API documentation"
+      ]
+    },
+    "technologies": [
+      "Node.js",
+      "PHP",
+      "Laravel",
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "timeline": {
+      "en": "4–10 weeks"
+    },
+    "price_model": "custom",
+    "price_from": 2500,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": false,
+    "is_active": true,
+    "order": 5
+  },
+  {
+    "slug": "maintenance-support",
+    "icon": "Headphones",
+    "category": "support",
+    "title": {
+      "en": "Maintenance & Support",
+      "fr": "الصيانة والدعم",
+      "ar": "الصيانة والدعم"
+    },
+    "short_description": {
+      "en": "Keep your products healthy and secure",
+      "fr": "Gardez vos produits en bonne santé et sécurisés",
+      "ar": "احفظ منتجاتك صحية وآمنة"
+    },
+    "description": {
+      "en": "Ongoing care for your digital products: updates, security patches, performance tuning, and reliable support.",
+      "fr": "Soin continu de vos produits numériques : mises à jour, correctifs de sécurité, réglage des performances et support fiable.",
+      "ar": "رعاية مستمرة لمنتجاتك الرقمية: تحديثات وتحسينات أمنية وضبط الأداء."
+    },
+    "deliverables": {
+      "en": [
+        "24/7 monitoring",
+        "Security updates",
+        "Bug fixes",
+        "Monthly reports"
+      ]
+    },
+    "technologies": [
+      "Various"
+    ],
+    "timeline": {
+      "en": "Recurring"
+    },
+    "price_model": "subscription",
+    "price_from": 299,
+    "price_currency": "USD",
+    "price_period": "month",
+    "is_featured": false,
+    "is_active": true,
+    "order": 6
+  },
+  {
+    "slug": "seo-performance",
+    "icon": "TrendingUp",
+    "category": "marketing",
+    "title": {
+      "en": "SEO & Performance",
+      "fr": "SEO والأداء",
+      "ar": "تحسين محركات البحث والأداء"
+    },
+    "short_description": {
+      "en": "Rank higher, load faster, convert better",
+      "fr": "تصدر النتائج وتحمّل أسرع",
+      "ar": "تصدر النتائج وتحمّل أسرع"
+    },
+    "description": {
+      "en": "Technical SEO, speed optimization, and analytics so your site ranks higher and converts better.",
+      "fr": "SEO technique, optimisation de la vitesse et analytique pour mieux classer et convertir votre site.",
+      "ar": "تحسين محركات البحث التقني وتحسين السرعة والبيانات التحليلية."
+    },
+    "deliverables": {
+      "en": [
+        "Technical SEO audit",
+        "Core Web Vitals optimization",
+        "Analytics setup",
+        "Performance reports"
+      ]
+    },
+    "technologies": [
+      "Google Search Console",
+      "Lighthouse"
+    ],
+    "timeline": {
+      "en": "2–4 weeks"
+    },
+    "price_model": "custom",
+    "price_from": 800,
+    "price_currency": "USD",
+    "price_period": null,
+    "is_featured": false,
+    "is_active": true,
+    "order": 7
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "fintech-dashboard",
+    "category": "saas",
+    "title": {
+      "en": "FinTech Analytics Dashboard",
+      "fr": "Tableau de bord analytique",
+      "ar": "لوحة تحليلات التمويل"
+    },
+    "client_name": "NeoBank Europe",
+    "summary": {
+      "en": "A real-time financial analytics platform for a European neobank, handling millions of transactions.",
+      "fr": "Une plateforme d'analyse financière en temps réel pour une néobanque européenne.",
+      "ar": "منصة تحليلات مالية في الوقت الحقيقي لنيوبانك أوروبي."
+    },
+    "problem": {
+      "en": "The client needed a performant, real-time analytics dashboard that could handle millions of transactions while remaining fast on any device.",
+      "fr": "Le client avait besoin d'un tableau de bord analytique rapide capable de gérer des millions de transactions.",
+      "ar": "احتاج العميل لوحة تحليلات سريعة قادرة على معالجة ملايين المعاملات."
+    },
+    "solution": {
+      "en": "We built a modular Next.js frontend with React Query for data, WebSocket live updates, and a serverless data pipeline on AWS.",
+      "fr": "Nous avons construit une interface Next.js modulaire avec React Query, des mises à jour en direct par WebSocket, et un pipeline de données serverless sur AWS.",
+      "ar": "بنينا واجهة Next.js مرنة مع React Query وتحديثات مباشرة عبر WebSocket."
+    },
+    "result": {
+      "en": "Page load under 1.2s, 40% reduction in reported performance tickets, and adoption across 3 product lines.",
+      "fr": "Chargement de page inférieur à 1,2s, -40% de tickets de performance, et adoption sur 3 lignes de produits.",
+      "ar": "تحميل الصفحة أقل من 1.2 ثانية وانخفاض 40% في مشاكل الأداء."
+    },
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "live_url": "https://example.com",
+    "completed_at": "2025-01-01",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    "cover": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 1
+  },
+  {
+    "slug": "eco-marketplace",
+    "category": "ecommerce",
+    "title": {
+      "en": "Eco Marketplace",
+      "fr": "Marché écologico",
+      "ar": "سوق بيئي"
+    },
+    "client_name": "EcoStore Collective",
+    "summary": {
+      "en": "A marketplace connecting eco-friendly brands with conscious consumers.",
+      "fr": "Marché reliant des marques écologiques aux consommateurs.",
+      "ar": "سوق يربط العلامات البيئية بالمستهلكين الواعين."
+    },
+    "problem": {
+      "en": "Need a scalable marketplace with vendor management, split payments, and sustainable sourcing badges.",
+      "fr": "Besoin d'une marketplace évolutive avec gestion des vendeurs et paiements partagés.",
+      "ar": "حاجة إلى سوق قابل للتوسع مع إدارة البائعين."
+    },
+    "solution": {
+      "en": "Custom Laravel backend with Stripe Connect, React storefront, and real-time inventory sync.",
+      "fr": "Backend Laravel personnalisé avec Stripe Connect et synchronisation des stocks.",
+      "ar": "واجهة خلفية Laravel مخصصة مع Stripe Connect."
+    },
+    "result": {
+      "en": "Launched in 12 weeks with 50+ onboarded vendors and $120k GMV in the first quarter.",
+      "fr": "Lancé en 12 semaines avec 50+ vendeurs et 120k$ de GMV au premier trimestre.",
+      "ar": "أطلقت في 12 أسبوعاً مع 50+ بائع."
+    },
+    "technologies": [
+      "Laravel",
+      "React",
+      "MySQL",
+      "Stripe"
+    ],
+    "live_url": "https://example.com",
+    "completed_at": "2025-01-01",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+    "cover": null,
+    "gallery": [
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 2
+  },
+  {
+    "slug": "fitness-app",
+    "category": "mobile",
+    "title": {
+      "en": "FitTrack Mobile App",
+      "fr": "Application FitTrack",
+      "ar": "تطبيق اللياقة"
+    },
+    "client_name": "FitTrack Inc.",
+    "summary": {
+      "en": "A fitness tracking app with workout plans, progress analytics, and social challenges.",
+      "fr": "Application de suivi de fitness avec plans et défis sociaux.",
+      "ar": "تطبيق تتبع لياقة مع خطط وتمارين."
+    },
+    "problem": {
+      "en": "Build a cross-platform mobile app with offline sync and gamified user engagement.",
+      "fr": "Application mobile cross-platform avec synchronisation hors ligne.",
+      "ar": "تطبيق جوال يعمل دون اتصال مع تحفيز المستخدمين."
+    },
+    "solution": {
+      "en": "React Native with local-first data sync and a custom analytics backend.",
+      "fr": "React Native avec synchronisation des données et backend analytique.",
+      "ar": "React Native مع مزامنة البيانات ومحللات مخصصة."
+    },
+    "result": {
+      "en": "250k downloads, 4.7★ rating, 35% weekly active user retention.",
+      "fr": "250k téléchargements, note 4,7★, rétention hebdomadaire de 35%.",
+      "ar": "250 ألف تحميل وتقييم 4.7."
+    },
+    "technologies": [
+      "React Native",
+      "Expo",
+      "Node.js",
+      "MongoDB"
+    ],
+    "live_url": "https://example.com",
+    "completed_at": "2024-01-01",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    "cover": null,
+    "gallery": [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 3
+  },
+  {
+    "slug": "legal-portal",
+    "category": "web",
+    "title": {
+      "en": "Legal Document Portal",
+      "fr": "Portail de documents juridiques",
+      "ar": "بوابة الوثائق القانونية"
+    },
+    "client_name": "Sophia Legal",
+    "summary": {
+      "en": "Secure client portal for a law firm to share, track, and e-sign legal documents.",
+      "fr": "Portail sécurisé pour cabinets d'avocats : partage, suivi et signature.",
+      "ar": "بوابة آمنة لمكاتب المحاماة لمشاركة وتوقيع الوثائق."
+    },
+    "problem": {
+      "en": "Handle sensitive legal documents with enterprise-grade security and audit trails.",
+      "fr": "Gestion de documents juridiques sensibles avec sécurité renforcée.",
+      "ar": "معالجة الوثائق القانونية الحساسة بأمان عالٍ."
+    },
+    "solution": {
+      "en": "PHP/Laravel with end-to-end encryption, role-based access, and DocuSign integration.",
+      "fr": "Laravel avec chiffrement, accès basé sur les rôles et intégration DocuSign.",
+      "ar": "Laravel مع التشفير والوصول المأذون به."
+    },
+    "result": {
+      "en": "Zero security incidents, 99.99% uptime, adopted by 120+ attorneys.",
+      "fr": "Zéro incident de sécurité, 99,99% d'uptime, adopté par 120+ avocats.",
+      "ar": "صفر حوادث أمنية و99.99% وقت التشغيل."
+    },
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "Vue.js",
+      "AWS"
+    ],
+    "live_url": "https://example.com",
+    "completed_at": "2025-01-01",
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
+    "cover": null,
+    "gallery": [
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+    ],
+    "is_featured": false,
+    "is_active": true,
+    "order": 4
+  }
+]

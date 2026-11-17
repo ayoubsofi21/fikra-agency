@@ -1,0 +1,442 @@
+[
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Unlimited invoices & customers"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Automated payment reminders"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Recurring billing & subscriptions"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Multi-currency & tax handling"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Client portal & payment links"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Financial reports & analytics"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "PDF export & branded templates"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "invoice-management",
+    "title": {
+      "en": "Stripe & PayPal integration"
+    },
+    "description": null,
+    "order": 8
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Leave balance tracking"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Multi-level approval workflow"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Team calendar view"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Public holiday management"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Leave type customization"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Payroll export & reports"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "leave-management",
+    "title": {
+      "en": "Employee self-service portal"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Event & ticket type creation"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Interactive seat map"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "QR code check-in app"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Refund & cancellation rules"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Attendee analytics dashboard"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Email & SMS notifications"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Multi-payment gateways"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "event-ticketing",
+    "title": {
+      "en": "Affiliate & promo codes"
+    },
+    "description": null,
+    "order": 8
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "20+ ATS-friendly templates"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "Live preview & editor"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "Export PDF, DOCX, JPG"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "ATS score checker"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "Pay-per-download billing"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "Analytics & A/B testing"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "White-label option available"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "resume-builder-saas",
+    "title": {
+      "en": "User accounts & history"
+    },
+    "description": null,
+    "order": 8
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Digital menu with categories"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Online payment & cash on delivery"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Table reservation system"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Kitchen display system (KDS)"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Delivery route optimization"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Customer reviews & ratings"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Loyalty & discount engine"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "restaurant-ordering",
+    "title": {
+      "en": "Sales & inventory reports"
+    },
+    "description": null,
+    "order": 8
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "Appointment scheduling"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "Electronic patient records"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "E-prescription generation"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "Telemedicine video calls"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "Billing & insurance claims"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "Lab test integration"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "SMS reminders"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "medical-practice",
+    "title": {
+      "en": "HIPAA-compliant hosting"
+    },
+    "description": null,
+    "order": 8
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Product variants & inventory"
+    },
+    "description": null,
+    "order": 1
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Advanced search & filters"
+    },
+    "description": null,
+    "order": 2
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Wishlist & compare"
+    },
+    "description": null,
+    "order": 3
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Multi-shipping & taxes"
+    },
+    "description": null,
+    "order": 4
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Abandoned cart recovery"
+    },
+    "description": null,
+    "order": 5
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Marketing & discount tools"
+    },
+    "description": null,
+    "order": 6
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "SEO-optimized"
+    },
+    "description": null,
+    "order": 7
+  },
+  {
+    "solution_slug": "ecommerce-store",
+    "title": {
+      "en": "Fast, mobile-first"
+    },
+    "description": null,
+    "order": 8
+  }
+]

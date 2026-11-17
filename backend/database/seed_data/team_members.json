@@ -1,0 +1,129 @@
+[
+  {
+    "name": {
+      "en": "Ayoub Sofi",
+      "fr": "Ayoub Sofi",
+      "ar": "أيوب صوفي"
+    },
+    "role": {
+      "en": "Full Stack Developer",
+      "fr": "Développeur Full Stack",
+      "ar": "مطور واجهات أمامية وتصميم"
+    },
+    "bio": {
+      "en": "Laravel & React specialist. Leads backend architecture and full-cycle development.",
+      "fr": "Spécialiste Laravel & React. Architecture backend et développement complet.",
+      "ar": "متخصص Laravel و React. يقود بنية الخلفية والتطوير الدوري."
+    },
+    "skills": [
+      "Laravel",
+      "PHP",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "github_url": "https://github.com/ayoubsofi",
+    "linkedin_url": "https://linkedin.com/in/ayoubsofi",
+    "twitter": null,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "email": null,
+    "featured": true,
+    "order": 1,
+    "is_active": true
+  },
+  {
+    "name": {
+      "en": "Sarah Bennani",
+      "fr": "Sarah Bennani",
+      "ar": "سارة بناني"
+    },
+    "role": {
+      "en": "Frontend Developer & UI/UX Designer",
+      "fr": "Développeuse Frontend & Designer UI/UX",
+      "ar": "مطوِرة واجهات وأخصائية تصميم"
+    },
+    "bio": {
+      "en": "Crafts pixel-perfect interfaces with React and Framer Motion. Bridges design and code.",
+      "fr": "Interface pixel-perfect avec React et Framer Motion. Fait le lien entre design et code.",
+      "ar": "تصنع واجهات دقيقة مع React و Framer Motion. تربط التصميم بالكود."
+    },
+    "skills": [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Figma",
+      "JavaScript"
+    ],
+    "github_url": "https://github.com/sarahbennani",
+    "linkedin_url": "https://linkedin.com/in/sarahbennani",
+    "twitter": null,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "email": null,
+    "featured": true,
+    "order": 2,
+    "is_active": true
+  },
+  {
+    "name": {
+      "en": "Karim Idrissi",
+      "fr": "Karim Idrissi",
+      "ar": "كريم الإدريسي"
+    },
+    "role": {
+      "en": "Backend Developer",
+      "fr": "Développeur Backend",
+      "ar": "مطور واجهة خلفية"
+    },
+    "bio": {
+      "en": "Designs scalable APIs and cloud infrastructure. Performance and security enthusiast.",
+      "fr": "Conçoit des API évolutives et une infrastructure cloud. Passionné de performance et sécurité.",
+      "ar": "يصمم واجهات API قابلة للتوسع وبنية سحابية. شغف بالأداء والأمان."
+    },
+    "skills": [
+      "Node.js",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "github_url": "https://github.com/karimidrissi",
+    "linkedin_url": "https://linkedin.com/in/karimidrissi",
+    "twitter": null,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "email": null,
+    "featured": true,
+    "order": 3,
+    "is_active": true
+  },
+  {
+    "name": {
+      "en": "Lina Amrani",
+      "fr": "Lina Amrani",
+      "ar": "ليلى العمراني"
+    },
+    "role": {
+      "en": "Project Manager & Business Development",
+      "fr": "Chef de projet & Développement commercial",
+      "ar": "مديرة مشاريع وتطوير أعمال"
+    },
+    "bio": {
+      "en": "Keeps projects on track and finds new opportunities. Your bridge to our engineering team.",
+      "fr": "Garde les projets en marche et trouve de nouvelles opportunités. Votre lien avec l'équipe technique.",
+      "ar": "تحافظ على سير المشاريع وتجد فرصاً جديدة. جسرك إلى فريق الهندسة."
+    },
+    "skills": [
+      "Project Management",
+      "Agile",
+      "Business Development",
+      "Client Relations"
+    ],
+    "github_url": null,
+    "linkedin_url": "https://linkedin.com/in/linaamrani",
+    "twitter": null,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "email": null,
+    "featured": true,
+    "order": 4,
+    "is_active": true
+  }
+]

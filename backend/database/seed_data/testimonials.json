@@ -1,0 +1,188 @@
+[
+  {
+    "author_name": {
+      "en": "Michael Dubois",
+      "fr": "Michael Dubois",
+      "ar": "ميشل دوبيس"
+    },
+    "author_role": {
+      "en": "CEO",
+      "fr": "PDG",
+      "ar": "الرئيس التنفيذي"
+    },
+    "company": {
+      "en": "PayFlow",
+      "fr": "PayFlow",
+      "ar": "PayFlow"
+    },
+    "content": {
+      "en": "FIKRA delivered our fintech dashboard ahead of schedule. Their code quality and communication are top-notch.",
+      "fr": "FIKRA a livré notre tableau de bord fintech avant le calendrier. Qualité du code et communication exceptionnelles.",
+      "ar": "أعطت فيكرا لوحة القيادة الخاصة بنا قبل الموعد المحدد. جودة الكود والاتصالات على أعلى مستوى."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "Web app",
+      "fr": "Application web",
+      "ar": "تطبيق ويب"
+    },
+    "rating": 5,
+    "order": 1,
+    "is_active": true
+  },
+  {
+    "author_name": {
+      "en": "Amina Charfi",
+      "fr": "Amina Charfi",
+      "ar": "أمينة الصيرفي"
+    },
+    "author_role": {
+      "en": "Founder",
+      "fr": "Fondatrice",
+      "ar": "المؤسسة"
+    },
+    "company": {
+      "en": "EcoCart",
+      "fr": "EcoCart",
+      "ar": "سلة بيئية"
+    },
+    "content": {
+      "en": "We launched our e-commerce store in 4 weeks. Sales are up 3x since. Worth every dirham.",
+      "fr": "Nous avons lancé notre boutique en 4 semaines. Ventes multipliées par 3. Chaque dirham en vaut la peine.",
+      "ar": "أطلقت متجرنا في 4 أسابيع. المبيعات تضاعفت 3 مرات. يستحق كل درهم."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "E-commerce",
+      "fr": "E-commerce",
+      "ar": "التجارة الإلكترونية"
+    },
+    "rating": 5,
+    "order": 2,
+    "is_active": true
+  },
+  {
+    "author_name": {
+      "en": "Omar Khalil",
+      "fr": "Omar Khalil",
+      "ar": "عمر خليل"
+    },
+    "author_role": {
+      "en": "Operations Lead",
+      "fr": "Responsable opérations",
+      "ar": "رئيس العمليات"
+    },
+    "company": {
+      "en": "MediCare Clinic",
+      "fr": "MediCare",
+      "ar": "مركز طبي"
+    },
+    "content": {
+      "en": "The patient portal transformed how we work. Simple, secure, and reliable. Highly recommended.",
+      "fr": "Le portail patients a transformé notre travail. Simple, sécurisé et fiable. Hautement recommandé.",
+      "ar": "حولت بوابة المرضى طريقة عملنا. بسيطة وآمنة وموثوقة. أنصح بها بشدة."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "Custom platform",
+      "fr": "Plateforme sur mesure",
+      "ar": "منصة مخصصة"
+    },
+    "rating": 5,
+    "order": 3,
+    "is_active": true
+  },
+  {
+    "author_name": {
+      "en": "Julien Mercier",
+      "fr": "Julien Mercier",
+      "ar": "جيون ميرسيير"
+    },
+    "author_role": {
+      "en": "Marketing Director",
+      "fr": "Directeur marketing",
+      "ar": "مدير التسويق"
+    },
+    "company": {
+      "en": "EventFlow",
+      "fr": "EventFlow",
+      "ar": "EventFlow"
+    },
+    "content": {
+      "en": "Event ticketing went from concept to launch in 8 weeks. Smooth process and great support.",
+      "fr": "La billetterie est passée du concept au lancement en 8 semaines. Processus fluide et support excellent.",
+      "ar": "نظام التذاكر تحول من المفهوم إلى الإطلاق في 8 أسابيع. عملية سلسة ودعم ممتاز."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "SaaS product",
+      "fr": "Produit SaaS",
+      "ar": "منتج SaaS"
+    },
+    "rating": 5,
+    "order": 4,
+    "is_active": true
+  },
+  {
+    "author_name": {
+      "en": "Fatima Zahra Nour",
+      "fr": "Fatima Zahra Nour",
+      "ar": "فاطمة الزهراء نور"
+    },
+    "author_role": {
+      "en": "Store Owner",
+      "fr": "Propriétaire de magasin",
+      "ar": "صاحبة متجر"
+    },
+    "company": {
+      "en": "Bakery delight",
+      "fr": "Pâtisserie Délice",
+      "ar": "مخبز delight"
+    },
+    "content": {
+      "en": "The restaurant ordering solution brought our online orders to life. Customers love it.",
+      "fr": "La solution de commande a donné vie à nos commandes en ligne. Les clients adorent.",
+      "ar": "حل الطلبات أعطانا حياة للطلبات عبر الإنترنت. الزبائن يحبونه."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "Restaurant template",
+      "fr": "Modèle restauration",
+      "ar": "قالب مطعم"
+    },
+    "rating": 5,
+    "order": 5,
+    "is_active": true
+  },
+  {
+    "author_name": {
+      "en": "David Levy",
+      "fr": "David Levy",
+      "ar": "دافيد ليفي"
+    },
+    "author_role": {
+      "en": "CTO",
+      "fr": "DSI",
+      "ar": "المدير التقني"
+    },
+    "company": {
+      "en": "StartScale",
+      "fr": "StartScale",
+      "ar": "StartScale"
+    },
+    "content": {
+      "en": "Clean architecture, great communication, and a team that genuinely cares about results.",
+      "fr": "Architecture propre, excellente communication, une équipe qui se soucie réellement des résultats.",
+      "ar": "بنية نظيفة واتصالات ممتازة وفريق يهتم حقاً بالنتائج."
+    },
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "project_type": {
+      "en": "Custom platform",
+      "fr": "Plateforme sur mesure",
+      "ar": "منصة مخصصة"
+    },
+    "rating": 5,
+    "order": 6,
+    "is_active": true
+  }
+]

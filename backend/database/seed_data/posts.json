@@ -1,0 +1,737 @@
+[
+  {
+    "slug": "building-scalable-saas",
+    "category_slug": "engineering",
+    "author_name": {
+      "en": "Ayoub Sofi",
+      "fr": "Ayoub Sofi",
+      "ar": "أيوب صوفي"
+    },
+    "title": {
+      "en": "Building a Scalable SaaS: Lessons from 3 Years in Production",
+      "fr": "Construire un SaaS évolutif : leçons de 3 ans en production",
+      "ar": "بناء SaaS قابل للتوسع: دروس من 3 سنوات في الإنتاج"
+    },
+    "excerpt": {
+      "en": "What we learned about multi-tenancy, database sharding, and cost optimization.",
+      "fr": "Ce que nous avons appris sur la multi-location, le sharding de bases de données.",
+      "ar": "ما تعلمناه حول تعدد المستأجرين وتجزئة قواعد البيانات."
+    },
+    "content": {
+      "en": [
+        {
+          "type": "p",
+          "text": "Three years ago we shipped the first version of a multi-tenant SaaS. It served a handful of accounts and felt fast. Today it serves thousands of tenants across three regions, and almost none of the original architecture survived intact. Here is what we learned the hard way."
+        },
+        {
+          "type": "h2",
+          "text": "Start boring, but leave seams"
+        },
+        {
+          "type": "p",
+          "text": "The first version used one database, a monolithic Laravel app, and no queue. That was the right call: we shipped in eight weeks and learned what customers actually wanted. What mattered was leaving seams — clear module boundaries, one place where billing logic lived, and background jobs for anything slower than a second."
+        },
+        {
+          "type": "h3",
+          "text": "Multi-tenancy: decide early, change cheaply later"
+        },
+        {
+          "type": "p",
+          "text": "We chose shared tables with a tenant_id column from day one. Reporting stayed trivial and migrations stayed manageable. Had we started with database-per-tenant, moving to a shared schema would have cost months."
+        },
+        {
+          "type": "h3",
+          "text": "Cost optimization is a feature"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Move nightly reports off the request path",
+            "Cache at the edge — most reads hit the same dashboards",
+            "Track cost per tenant, not just total cost",
+            "Delete what you no longer need; storage compounds"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "What we would do again"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Ship the boring version first",
+            "Instrument everything before optimizing",
+            "Write the migration plan while the system is still small",
+            "Say no to features that break the tenancy model"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Scaling is not a big-bang rewrite. It is a series of small, boring decisions made while the system is still forgiving."
+        }
+      ],
+      "fr": [
+        {
+          "type": "p",
+          "text": "Il y a trois ans, nous avons livré la première version d'un SaaS multi-locataires. Elle servait quelques comptes et semblait rapide. Aujourd'hui, elle sert des milliers de locataires dans trois régions, et presque rien de l'architecture d'origine n'a survécu intact. Voici ce que nous avons appris dans la douleur."
+        },
+        {
+          "type": "h2",
+          "text": "Commencer simplement, mais laisser des coutures"
+        },
+        {
+          "type": "p",
+          "text": "La première version utilisait une base unique, une application Laravel monolithique et aucune file d'attente. C'était le bon choix : nous avons livré en huit semaines et appris ce que les clients voulaient vraiment. L'important était de laisser des coutures — des frontières de modules claires, un seul endroit pour la facturation, et des tâches d'arrière-plan pour tout ce qui dépasse une seconde."
+        },
+        {
+          "type": "h3",
+          "text": "Multi-locataires : décider tôt, changer à moindre coût"
+        },
+        {
+          "type": "p",
+          "text": "Nous avons choisi des tables partagées avec une colonne tenant_id dès le premier jour. Le reporting est resté simple et les migrations gérables. Si nous avions commencé par une base par locataire, le passage au schéma partagé aurait coûté des mois."
+        },
+        {
+          "type": "h3",
+          "text": "L'optimisation des coûts est une fonctionnalité"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Sortir les rapports nocturnes du chemin de requête",
+            "Mettre en cache au bord — la plupart des lectures touchent les mêmes tableaux de bord",
+            "Suivre le coût par locataire, pas seulement le coût total",
+            "Supprimer ce qui ne sert plus ; le stockage s'accumule"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Ce que nous referions"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Livrer d'abord la version simple",
+            "Tout instrumenter avant d'optimiser",
+            "Écrire le plan de migration tant que le système est petit",
+            "Refuser les fonctionnalités qui cassent le modèle multi-locataires"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "L'escalade n'est pas une réécriture totale. C'est une série de décisions simples prises pendant que le système est encore indulgent."
+        }
+      ],
+      "ar": [
+        {
+          "type": "p",
+          "text": "قبل ثلاث سنوات أطلقنا النسخة الأولى من منصة SaaS متعددة المستأجرين. كانت تخدم عددًا قليلًا من الحسابات وبدوّ سريعة. اليوم تخدم آلاف المستأجرين في ثلاث مناطق، ولم ينجُ من البنية الأصلية تقريبًا شيء. هذا ما تعلمناه على المرّة."
+        },
+        {
+          "type": "h2",
+          "text": "ابدأ البسيط، لكن اترك فواصل واضحة"
+        },
+        {
+          "type": "p",
+          "text": "استخدمت النسخة الأولى قاعدة بيانات واحدة وتطبيق Laravel موحّدًا وبدون طوابير. كان ذلك القرار الصحيح: أطلقنا خلال ثمانية أسابيع وتعلّمنا ما يريده العملاء فعلًا. المهم كان ترك فواصل — حدودًا واضحة للوحدات، ومكانًا واحدًا لمنطق الفواتير، ومهام خلفية لكل ما يستغرق أكثر من ثانية."
+        },
+        {
+          "type": "h3",
+          "text": "تعدد المستأجرين: قرّر مبكرًا، وغيّر لاحقًا بكلفة أقل"
+        },
+        {
+          "type": "p",
+          "text": "اخترنا جداولًا مشتركة بعمود tenant_id منذ اليوم الأول. بقيت التقارير بسيطة والترحيلات قابلة للإدارة. لو بدأنا بقاعدة لكل مستأجر لكلفتنا الانتقال إلى المخطط المشترك شهورًا."
+        },
+        {
+          "type": "h3",
+          "text": "تحسين التكلفة ميزة أساسية"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "أخرج تقارير الليل من مسار الطلبات",
+            "خزّن عند الحافة — معظم القراءات تصل إلى اللوحات نفسها",
+            "تابع التكلفة لكل مستأجر لا الإجمالي فقط",
+            "احذف ما لم تعد تحتاجه؛ التخزين يتراكم"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "ما سنكرره"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "أطلق النسخة البسيطة أولًا",
+            "قِس كل شيء قبل التحسين",
+            "اكتب خطة الترحيل ما دام النظام لا يزال صغيرًا",
+            "ارفض الميزات التي تكسر نموذج تعدد المستأجرين"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "التوسع ليس إعادة بناء دفعة واحدة. إنه سلسلة قرارات بسيطة تُتخذ ما دام النظام متسامحًا."
+        }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    "reading_time": 8,
+    "status": "published",
+    "published_at": "2025-10-20",
+    "seo_title": null,
+    "seo_description": null
+  },
+  {
+    "slug": "ui-trends-2025",
+    "category_slug": "design",
+    "author_name": {
+      "en": "Sarah Bennani",
+      "fr": "Sarah Bennani",
+      "ar": "سارة بناني"
+    },
+    "title": {
+      "en": "UI Trends That Will Define 2025",
+      "fr": "Les tendances UI qui définiront 2025",
+      "ar": "اتجاهات الواجهة التي ستحدد 2025"
+    },
+    "excerpt": {
+      "en": "From glassmorphism to AI-assisted interfaces, here is what is shaping design.",
+      "fr": "Du glassmorphism aux interfaces assistées par IA.",
+      "ar": "من الزجاج إلى الواجهات المساعدة بالذكاء الاصطناعي."
+    },
+    "content": {
+      "en": [
+        {
+          "type": "p",
+          "text": "Every year the interface landscape shifts a little, and 2025 is no exception. These are the trends we are actually shipping — not the ones that look good in a concept video."
+        },
+        {
+          "type": "h2",
+          "text": "Interfaces that explain themselves"
+        },
+        {
+          "type": "p",
+          "text": "Empty states, progressive disclosure, and inline hints are replacing long onboarding tours. Users learn the product while using it, which cuts support load and activation time."
+        },
+        {
+          "type": "h3",
+          "text": "Glassmorphism, used with restraint"
+        },
+        {
+          "type": "p",
+          "text": "Frosted surfaces work beautifully as hierarchy — over imagery, in overlays, in navigation. Used everywhere they destroy contrast and legibility. Pair them with solid surfaces and a strict type scale."
+        },
+        {
+          "type": "h3",
+          "text": "AI-assisted, not AI-decorated"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Suggest the next action, don't hijack the flow",
+            "Show the source when you generate text",
+            "Make every AI output editable and dismissible",
+            "Never hide the manual path"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Motion with a purpose"
+        },
+        {
+          "type": "p",
+          "text": "Micro-interactions that confirm an action beat decorative animation every time. And with reduced-motion preferences respected, motion becomes an accessibility tool rather than a tax."
+        },
+        {
+          "type": "h3",
+          "text": "What we are watching"
+        },
+        {
+          "type": "p",
+          "text": "Variable fonts for responsive typography, denser data tables for internal tools, and a welcome return to bold, readable type over gradient noise."
+        }
+      ],
+      "fr": [
+        {
+          "type": "p",
+          "text": "Chaque année, le paysage des interfaces bouge un peu, et 2025 ne fait pas exception. Voici les tendances que nous livrons réellement — pas celles qui font joli dans une vidéo de concept."
+        },
+        {
+          "type": "h2",
+          "text": "Des interfaces qui s'expliquent d'elles-mêmes"
+        },
+        {
+          "type": "p",
+          "text": "États vides, divulgation progressive et conseils en ligne remplacent les longs parcours d'introduction. L'utilisateur apprend le produit en l'utilisant, ce qui réduit le support et le temps d'activation."
+        },
+        {
+          "type": "h3",
+          "text": "Glassmorphism, avec retenue"
+        },
+        {
+          "type": "p",
+          "text": "Les surfaces givrées servent très bien la hiérarchie — sur les images, dans les superpositions, dans la navigation. Partout, elles détruisent le contraste et la lisibilité. Associez-les à des surfaces solides et à une échelle typographique stricte."
+        },
+        {
+          "type": "h3",
+          "text": "IA assistée, pas IA décorative"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Suggérer l'action suivante, ne pas détourner le parcours",
+            "Afficher la source lorsque vous générez du texte",
+            "Rendre chaque sortie d'IA modifiable et fermable",
+            "Ne jamais masquer le chemin manuel"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Un mouvement qui a du sens"
+        },
+        {
+          "type": "p",
+          "text": "Les micro-interactions qui confirment une action surpassent toujours l'animation décorative. En respectant les préférences de réduction de mouvement, le motion devient un outil d'accessibilité plutôt qu'un coût."
+        },
+        {
+          "type": "h3",
+          "text": "Ce que nous observons"
+        },
+        {
+          "type": "p",
+          "text": "Les polices variables pour une typographie responsive, des tableaux de données plus denses pour les outils internes, et un retour bienvenu à une typographie lisible sur le bruit des dégradés."
+        }
+      ],
+      "ar": [
+        {
+          "type": "p",
+          "text": "كل عام يتحرك مشهد الواجهات قليلًا، وعام 2025 ليس استثناءً. هذه الاتجاهات التي ننفذها فعلًا — لا تلك التي تبدو جميلة في فيديو مفاهيمي."
+        },
+        {
+          "type": "h2",
+          "text": "واجهات تشرح نفسها"
+        },
+        {
+          "type": "p",
+          "text": "الحالات الفارغة والإفصاح التدريجي والتلميحات الداخلية تحل محل جولات التعريف الطويلة. يتعلم المستخدم المنتج أثناء استخدامه، ما يقلل الدعم ووقت التفعيل."
+        },
+        {
+          "type": "h3",
+          "text": "زجاجية بانضباط"
+        },
+        {
+          "type": "p",
+          "text": "الأسطح المثلجة تعمل بشكل رائع كهرمية — فوق الصور وفي الطبقات وقائمة التنقل. وباستخدامها في كل مكان تُتلف التباين والقراءة. امزجها مع أسطح صلبة وسلّم طباعي صارم."
+        },
+        {
+          "type": "h3",
+          "text": "ذكاء اصطناعي مساعد لا زخرفة"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "اقترح الخطوة التالية دون انتقاء تدفق المستخدم",
+            "أظهر المصدر عند توليد نص",
+            "اجعل كل مخرج قابل للتعديل والإغلاق",
+            "لا تخفي أبدًا الطريقة اليدوية"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "حركة لها غرض"
+        },
+        {
+          "type": "p",
+          "text": "التفاعلات الدقيقة التي تؤكد الإجراء تتفوق على الحركة الزخرفية دائمًا. ومع احترام تفضيلات تقليل الحركة تصبح الحركة أداة وصول لا ضريبة."
+        },
+        {
+          "type": "h3",
+          "text": "ما نراقبه"
+        },
+        {
+          "type": "p",
+          "text": "خطوط متغيرة للطباعة المتجاوبة، وجداول بيانات أكثر كثافة للأدوات الداخلية، وعودة حميدة إلى طباعة واضحة القراءة فوق ضجيج التدرجات."
+        }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+    "reading_time": 6,
+    "status": "published",
+    "published_at": "2025-09-15",
+    "seo_title": null,
+    "seo_description": null
+  },
+  {
+    "slug": "shopify-vs-custom",
+    "category_slug": "e-commerce",
+    "author_name": {
+      "en": "Karim Idrissi",
+      "fr": "Karim Idrissi",
+      "ar": "كريم الإدريسي"
+    },
+    "title": {
+      "en": "Shopify vs Custom Build: When to Use Which",
+      "fr": "Shopify vs développement sur mesure",
+      "ar": "Shopify مقابل البناء المخصص: متى تستخدم أيهما"
+    },
+    "excerpt": {
+      "en": "A practical framework for choosing the right e-commerce foundation for your business.",
+      "fr": "Un cadre pratique pour choisir la bonne fondation e-commerce.",
+      "ar": "إطار عملي لاختيار أساس التجارة الإلكترونية الصحيح لعملك."
+    },
+    "content": {
+      "en": [
+        {
+          "type": "p",
+          "text": "The wrong platform choice costs more than the build itself. Here is the framework we use with clients before writing a single line of code."
+        },
+        {
+          "type": "h2",
+          "text": "Choose Shopify when speed is the product"
+        },
+        {
+          "type": "p",
+          "text": "If your business is fundamentally about selling — standard catalog, standard checkout, standard shipping — Shopify wins. Payments, tax, fraud, and the app ecosystem are handled, and you spend your budget on merchandising and marketing instead of plumbing."
+        },
+        {
+          "type": "h3",
+          "text": "Signs Shopify is enough"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Catalog under a few thousand SKUs",
+            "Checkout flows that match the platform defaults",
+            "Integrations available as existing apps",
+            "Team without in-house engineering"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Signs you will fight the platform"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Custom checkout or pricing logic",
+            "B2B rules: quotes, credit terms, contract pricing",
+            "One catalog serving several distinct storefronts",
+            "Compliance the app ecosystem cannot cover"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Build custom when the store is the software"
+        },
+        {
+          "type": "p",
+          "text": "When the buying experience is your differentiator — subscriptions, marketplaces, configured products, complex pricing — the platform becomes a cage. That is where a custom build, or a headless setup on top of Shopify's API, earns its cost."
+        },
+        {
+          "type": "h3",
+          "text": "A practical middle path"
+        },
+        {
+          "type": "p",
+          "text": "Headless commerce keeps the payments and logistics you already trust while freeing the storefront. It costs more than a theme and less than a full rebuild, and it keeps your options open."
+        }
+      ],
+      "fr": [
+        {
+          "type": "p",
+          "text": "Le mauvais choix de plateforme coûte plus cher que le développement lui-même. Voici le cadre que nous utilisons avec les clients avant d'écrire une seule ligne de code."
+        },
+        {
+          "type": "h2",
+          "text": "Choisir Shopify quand la vitesse est le produit"
+        },
+        {
+          "type": "p",
+          "text": "Si votre activité consiste fondamentalement à vendre — catalogue standard, paiement standard, livraison standard — Shopify gagne. Paiements, taxes, fraude et écosystème d'applications sont gérés, et votre budget va au merchandising et au marketing plutôt qu'à la plomberie."
+        },
+        {
+          "type": "h3",
+          "text": "Signes que Shopify suffit"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Catalogue de quelques milliers d'articles au maximum",
+            "Parcours de paiement proches des réglages par défaut",
+            "Intégrations disponibles en applications existantes",
+            "Équipe sans ingénieurs internes"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Signes que vous lutterez contre la plateforme"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Paiement ou logique tarifaire personnalisés",
+            "Règles B2B : devis, crédit, tarifs contractuels",
+            "Un catalogue servant plusieurs boutiques distinctes",
+            "Conformité que l'écosystème d'apps ne couvre pas"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Construire sur mesure quand la boutique est le logiciel"
+        },
+        {
+          "type": "p",
+          "text": "Quand l'expérience d'achat est votre différenciateur — abonnements, marketplaces, produits configurables, tarifs complexes — la plateforme devient une cage. C'est là qu'un développement sur mesure, ou une architecture headless au-dessus de l'API Shopify, justifie son coût."
+        },
+        {
+          "type": "h3",
+          "text": "Un compromis pragmatique"
+        },
+        {
+          "type": "p",
+          "text": "Le commerce headless conserve les paiements et la logistique que vous connaissez tout en libérant la vitrine. Coûte plus qu'un thème et moins qu'une refonte complète, et garde vos options ouvertes."
+        }
+      ],
+      "ar": [
+        {
+          "type": "p",
+          "text": "اختيار المنصة الخاطئ يكلّف أكثر من بناء المتجر نفسه. هذا الإطار الذي نستخدمه مع العملاء قبل كتابة أي سطر برمجي."
+        },
+        {
+          "type": "h2",
+          "text": "اختر Shopify عندما السرعة هي المنتج"
+        },
+        {
+          "type": "p",
+          "text": "إذا كان نشاطك أساسًا البيع — كتالوج قياسي ودفع قياسي وشحن قياسي — فتفوز Shopify. المدفوعات والضرائب والاحتيال ونظام التطبيقات جاهزة، ويذهب ميزانيتك إلى العرض والتسويق لا إلى البنية التقنية."
+        },
+        {
+          "type": "h3",
+          "text": "مؤشرات أن Shopify تكفي"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "كتالوج لا يتجاوز بضعة آلاف منتج",
+            "مسارات دفع قريبة من الإعدادات الافتراضية",
+            "تكاملات متوفرة كتطبيقات جاهزة",
+            "فريق بدون مهندسين داخليين"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "مؤشرات أنك ستتصارع مع المنصة"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "دفع أو منطق تسعير مخصص",
+            "قواعد B2B: عروض أسعار وشروط ائتمان وعقود",
+            "كتالوج واحد يخدم عدة واجهات متجر",
+            "متطلبات لا يغطيها نظام التطبيقات"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "ابنِ مخصصًا عندما يكون المتجر هو البرنامج"
+        },
+        {
+          "type": "p",
+          "text": "عندما تكون تجربة الشراء هي تميّزك — اشتراكات ومنصات ومنتجات قابلة للتخصيص وتسعير معقد — تصبح المنصة قفصًا. هناك يبرّر البناء المخصص، أو البنية headless فوق واجهة Shopify، تكلفته."
+        },
+        {
+          "type": "h3",
+          "text": "مسار وسط عملي"
+        },
+        {
+          "type": "p",
+          "text": "التجارة headless تحافظ على المدفوعات واللوجستيات التي تثق بها وتحرّر الواجهة. تكلّف أكثر من قالب وأقل من إعادة بناء كاملة، وتبقى خياراتك مفتوحة."
+        }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
+    "reading_time": 10,
+    "status": "published",
+    "published_at": "2025-08-28",
+    "seo_title": null,
+    "seo_description": null
+  },
+  {
+    "slug": "accessibility-matters",
+    "category_slug": "ux",
+    "author_name": {
+      "en": "Sarah Bennani",
+      "fr": "Sarah Bennani",
+      "ar": "سارة بناني"
+    },
+    "title": {
+      "en": "Why Accessibility Should Be Your #1 Priority",
+      "fr": "Pourquoi l'accessibilité doit être votre priorité n°1",
+      "ar": "لماذا يجب أن يكون الوصول أولوية رقم 1"
+    },
+    "excerpt": {
+      "en": "Accessibility is not a feature, it is a baseline. Here is how to get it right.",
+      "fr": "L'accessibilité n'est pas une fonctionnalité, c'est une base.",
+      "ar": "الوصول ليس ميزة بل أساس. إليك كيفية القيام بذلك بشكل صحيح."
+    },
+    "content": {
+      "en": [
+        {
+          "type": "p",
+          "text": "Accessibility is not a feature, it is a baseline. In this digital age, building accessible websites isn't just a nice-to-have — it is a fundamental responsibility, and it brings tangible business benefits: wider audience reach, better SEO, improved usability for all users, and reduced legal risk."
+        },
+        {
+          "type": "h2",
+          "text": "What is web accessibility?"
+        },
+        {
+          "type": "p",
+          "text": "Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. More specifically, people can:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Perceive the information being presented",
+            "Operate the interface with a variety of input methods",
+            "Understand the information and operation of the interface",
+            "Have content robust enough to be interpreted reliably by assistive technologies"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "The business case"
+        },
+        {
+          "type": "p",
+          "text": "Over 1 billion people worldwide live with some form of disability. Accessible sites tend to have better SEO, perform better across devices and connection speeds, avoid costly litigation, and demonstrate genuine care for your users."
+        },
+        {
+          "type": "h2",
+          "text": "Getting started: quick wins"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Ensure sufficient color contrast between text and background",
+            "Add descriptive alt text to all meaningful images",
+            "Build a proper heading hierarchy (H1, H2, H3)",
+            "Make every interactive element keyboard-navigable",
+            "Provide clear focus indicators for keyboard users",
+            "Use semantic HTML elements instead of divs everywhere"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "At FIKRA, accessibility is woven into every project from day one — not bolted on at the end. We follow WCAG 2.2, test with real assistive technologies, and verify our work with automated tools. Your product should work for everyone."
+        }
+      ],
+      "fr": [
+        {
+          "type": "p",
+          "text": "L'accessibilité n'est pas une fonctionnalité, c'est une base. À l'ère numérique, construire des sites accessibles n'est pas un luxe — c'est une responsabilité fondamentale, et cela apporte des avantages concrets : une audience plus large, un meilleur SEO, une meilleure utilisabilité pour tous, et un risque juridique réduit."
+        },
+        {
+          "type": "h2",
+          "text": "Qu'est-ce que l'accessibilité web ?"
+        },
+        {
+          "type": "p",
+          "text": "L'accessibilité web signifie que les sites, outils et technologies sont conçus et développés pour que les personnes en situation de handicap puissent les utiliser. Plus précisément, les personnes peuvent :"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Percevoir l'information présentée",
+            "Utiliser l'interface avec différentes méthodes de saisie",
+            "Comprendre l'information et le fonctionnement de l'interface",
+            "Disposer d'un contenu suffisamment robuste pour être interprété de façon fiable par les technologies d'assistance"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "L'argument économique"
+        },
+        {
+          "type": "p",
+          "text": "Plus d'un milliard de personnes vivent avec un handicap. Les sites accessibles ont tendance à un meilleur SEO, fonctionnent mieux sur tous les appareils et connexions, évitent les contentieux coûteux, et montrent un réel souci de vos utilisateurs."
+        },
+        {
+          "type": "h2",
+          "text": "Démarrer : les victoires rapides"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "Assurer un contraste suffisant entre le texte et l'arrière-plan",
+            "Ajouter un texte alternatif descriptif à toutes les images significatives",
+            "Construire une hiérarchie de titres correcte (H1, H2, H3)",
+            "Rendre chaque élément interactif utilisable au clavier",
+            "Fournir des indicateurs de focus clairs pour le clavier",
+            "Utiliser des éléments HTML sémantiques plutôt que des div partout"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Chez FIKRA, l'accessibilité est intégrée à chaque projet dès le premier jour — pas ajoutée à la fin. Nous suivons WCAG 2.2, testons avec de vraies technologies d'assistance et vérifions nos livrables avec des outils automatisés."
+        }
+      ],
+      "ar": [
+        {
+          "type": "p",
+          "text": "الوصول ليس ميزة بل أساس. في هذا العصر الرقمي، بناء مواقع متاحة ليس رفاهية — بل مسؤولية جوهرية، ويحقق فوائد عملية: جمهور أوسع وتحسين أفضل لمحركات البحث وتجربة استخدام أفضل للجميع ومخاطر قانونية أقل."
+        },
+        {
+          "type": "h2",
+          "text": "ما هو الوصول إلى الويب؟"
+        },
+        {
+          "type": "p",
+          "text": "الوصول إلى الويب يعني تصميم المواقع والأدوات والتقنيات وتطويرها بحيث يستطيع الأشخاص ذوو الإعاقة استخدامها. وتحديدًا يستطيع الأشخاص:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "إدراك المعلومات المعروضة",
+            "التفاعل مع الواجهة بطرق إدخال مختلفة",
+            "فهم المعلومات وطريقة عمل الواجهة",
+            "امتلاك محتوى كافٍ الصلابة ليُفسَّر بشكل موثوق بتقنيات المساعدة"
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "الحجة الاقتصادية"
+        },
+        {
+          "type": "p",
+          "text": "أكثر من مليار شخص حول العالم يعانون من شكل من أشكال الإعاقة. المواقع المتاحة تتمتع بتحسين أفضل لمحركات البحث وتعمل بشكل أفضل على الأجهزة والاتصالات وتجنّب القضايا الباهظة وتبني ولاء العلامات."
+        },
+        {
+          "type": "h2",
+          "text": "البداية: مكاسب سريعة"
+        },
+        {
+          "type": "ol",
+          "items": [
+            "ضمان تباين لوني كافٍ بين النص والخلفية",
+            "إضافة نص بديل وصفي لكل صورة ذات معنى",
+            "بناء تدرّج عناوين صحيح (H1 و H2 و H3)",
+            "جعل كل عنصر تفاعلي قابلًا للتنقل بلوحة المفاتيح",
+            "توفير مؤشرات تركيز واضحة لمستخدمي لوحة المفاتيح",
+            "استخدام عناصر HTML دلالية بدل div في كل مكان"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "في FIKRA، يُنسج الوصول في كل مشروع من اليوم الأول — لا يُضاف في النهاية. نتبع WCAG 2.2 ونختبر بتقنيات مساعدة حقيقية ونتحقق من عملنا بأدوات مؤتمتة. منتجك يجب أن يعمل للجميع."
+        }
+      ]
+    },
+    "cover": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "reading_time": 7,
+    "status": "published",
+    "published_at": "2025-07-10",
+    "seo_title": null,
+    "seo_description": null
+  }
+]
