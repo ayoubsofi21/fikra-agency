@@ -24,6 +24,10 @@ unreachable (or a preview while `VITE_USE_MOCK=true`).
   FAQs, pricing and homepage stats come from the API
 - **Lead capture** — multi-step quote form (with file attachments), solution
   request modal, newsletter subscribe/unsubscribe
+- **Admin dashboard** — a full React interface at [`/admin`](http://localhost:3000/admin)
+  connected to the real API: token auth, protected routes, Admin/Editor
+  permissions, responsive sidebar, content CRUD (including soft-delete/restore),
+  trash, inbox, media uploads, settings and users — no mock data
 - **Admin API** — Sanctum token auth, roles (`admin`, `editor`), content CRUD,
   media library, quote/message/newsletter inbox with CSV exports, settings,
   users and dashboard counters
@@ -105,7 +109,48 @@ The Vite config proxies `/api` to `http://127.0.0.1:8000`, so the browser
 requests `http://localhost:3000/api/v1/...` and no CORS setup is needed in
 development.
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) for the public website, or
+[http://localhost:3000/admin/login](http://localhost:3000/admin/login) for the
+admin dashboard (sign in with one of the seeded accounts above).
+
+---
+
+## 🛠️ Admin dashboard
+
+The admin UI lives in [`src/admin/`](src/admin/) and is served by the same Vite
+app at **`/admin`**. It talks only to the existing Laravel endpoints in
+`backend/routes/api.php` — there are no fake endpoints or placeholder records.
+
+| URL | Purpose |
+| --- | --- |
+| `/admin/login` | Sign in (email + password), or request a reset link |
+| `/reset-password` | Password reset page used by the emailed reset link |
+| `/admin` | Dashboard counters and recent inbox activity |
+| `/admin/content/:resource` | Content CRUD (services, solutions, projects, posts, team, testimonials, FAQs, pricing, categories, solution features) |
+| `/admin/inbox/:type` | Quote requests, contact messages, newsletter subscribers (+ CSV export) |
+| `/admin/media` | Upload, rename, add alt text and delete media on any content item |
+| `/admin/settings` | Site identity, social links, homepage counters, WhatsApp number (Admin only) |
+| `/admin/content/users` | Create/edit/delete users and assign roles (Admin only) |
+
+**Authentication & permissions**
+
+- A Sanctum token is stored in `localStorage` under `fikra-admin-token` and sent
+  as `Authorization: Bearer <token>` by `src/admin/api/client.js`.
+- Protected routes redirect unauthenticated visitors to `/admin/login`; an
+  invalid or expired token is cleared automatically.
+- `Admin` (`abilities: ["*"]`) can access every section. `Editor` can manage
+  content, the inbox and media, but Settings and Users are hidden and blocked
+  at the route level.
+
+**Notes**
+
+- The backend must be running (`npm run api:serve`) for the dashboard to work;
+  `npm run api:queue` is needed for queued mail and image thumbnails/WebP
+  conversions.
+- Admin create/update forms submit the same `{ en, fr, ar }` payloads the
+  FormRequests expect; server-side validation errors appear inline per field.
+- Quote attachments are downloaded through the authenticated API, never via a
+  public link.
 
 ---
 
@@ -179,6 +224,12 @@ node final-audit.cjs                        # console errors, a11y, overflow, RT
 npx playwright test tests/                  # Playwright suites
 ```
 
+The admin dashboard was verified end-to-end against the live API: login/logout,
+guest redirects, invalid-token handling, localized validation and auth errors,
+all resource CRUD flows, soft-delete/restore, inbox status & read updates, CSV
+exports, media upload/metadata/delete, settings persistence, Admin/Editor
+permissions and all admin routes rendering without page errors.
+
 Current backend suite: **41 tests, 294 assertions**.
 
 ---
@@ -188,9 +239,10 @@ Current backend suite: **41 tests, 294 assertions**.
 ```
 fikra-agency/
 ├─ src/                  # React application
+│  ├─ admin/             # /admin dashboard (auth, API client, config, pages)
 │  ├─ hooks/             # useContent — API-backed content hooks
-│  ├─ services/api.js    # axios client + mock fallback
-│  ├─ pages/             # route pages
+│  ├─ services/api.js    # public axios client + mock fallback
+│  ├─ pages/             # public route pages
 │  ├─ components/        # ui, layout, sections
 │  ├─ i18n/              # en / fr / ar resources
 │  └─ utils/             # constants, helpers

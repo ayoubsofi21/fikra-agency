@@ -33,10 +33,14 @@ const updateSeoUrls = (pathname) => {
 const App = () => {
   const location = useLocation()
   const { t } = useTranslation()
+  const isAdmin = location.pathname.startsWith('/admin')
 
   useEffect(() => {
     updateSeoUrls(location.pathname)
   }, [location.pathname])
+
+  // The admin area renders its own shell (sidebar, topbar, no public chrome).
+  if (isAdmin) return <AppRoutes />
 
   return (
     <MotionConfig reducedMotion="user">
