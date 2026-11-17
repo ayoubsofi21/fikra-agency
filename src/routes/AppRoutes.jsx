@@ -28,6 +28,7 @@ const BlogPage = lazyDefault('Blog')
 const BlogPostPage = lazyDefault('BlogPost')
 const ContactPage = lazyDefault('Contact')
 const FaqPage = lazyDefault('Faq')
+const ResetPasswordPage = lazyDefault('ResetPassword')
 const PrivacyPage = lazyNamed('Legal', 'Privacy')
 const TermsPage = lazyNamed('Legal', 'Terms')
 const NotFoundPage = lazyDefault('NotFound')
@@ -58,6 +59,7 @@ const AppRoutes = () => {
       <Route path="/blog/:slug" element={Page(<BlogPostPage />)} />
       <Route path="/contact" element={Page(<ContactPage />)} />
       <Route path="/faq" element={Page(<FaqPage />)} />
+      <Route path="/reset-password" element={Page(<ResetPasswordPage />)} />
       <Route path="/privacy" element={Page(<PrivacyPage />)} />
       <Route path="/terms" element={Page(<TermsPage />)} />
       <Route path="*" element={Page(<NotFoundPage />)} />

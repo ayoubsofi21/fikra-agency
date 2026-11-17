@@ -265,4 +265,17 @@ export async function sendSolutionRequest(slug, data) {
   return res.data
 }
 
+/**
+ * Admin password reset (link sent by POST /admin/auth/forgot-password).
+ */
+export async function resetPassword(payload) {
+  if (API_CONFIG.useMock) {
+    await delay(800 + Math.random() * 700)
+    return { success: true }
+  }
+
+  const res = await api.post('/admin/auth/reset-password', payload)
+  return res.data
+}
+
 export default api

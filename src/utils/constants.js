@@ -64,6 +64,7 @@ export const ROUTES = {
   BLOG_POST: '/blog/:slug',
   CONTACT: '/contact',
   FAQ: '/faq',
+  RESET_PASSWORD: '/reset-password',
   PRIVACY: '/privacy',
   TERMS: '/terms',
   NOT_FOUND: '*',

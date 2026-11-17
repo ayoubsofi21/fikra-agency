@@ -104,7 +104,8 @@
     "changeLanguage": "Change language",
     "toggleTheme": "Toggle dark mode",
     "skipToContent": "Skip to main content",
-    "progress": "Form progress"
+    "progress": "Form progress",
+    "backHome": "Back to home"
   },
   "nav": {
     "home": "Home",
@@ -341,7 +342,10 @@
     "nameMin": "Name must be at least 2 characters",
     "email": "Please enter a valid email",
     "messageMin": "Message must be at least 10 characters",
-    "terms": "You must agree to the Terms of Service and Privacy Policy"
+    "terms": "You must agree to the Terms of Service and Privacy Policy",
+    "passwordMin": "Password must be at least 8 characters",
+    "passwordMatch": "Passwords do not match",
+    "required": "This field is required"
   },
   "blog": {
     "subtitle": "Insights on web development, design trends, and product thinking from the FIKRA team.",
@@ -354,5 +358,14 @@
       "ecommerce": "E-commerce",
       "ux": "UX"
     }
+  },
+  "resetPassword": {
+    "title": "Reset password",
+    "subtitle": "Choose a new password for your account.",
+    "password": "New password",
+    "passwordConfirm": "Confirm new password",
+    "submit": "Reset password",
+    "success": "Your password has been reset. You can now sign in with the new password.",
+    "invalidLink": "This password reset link is invalid or has expired. Please request a new one."
   }
 }
