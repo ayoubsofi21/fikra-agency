@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint --ext .js,.jsx .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api:setup": "composer install --working-dir=backend && cd backend && cp -n .env.example .env && php artisan key:generate && touch database/database.sqlite && php artisan migrate --seed && php artisan storage:link",
+    "api:serve": "php backend/artisan serve --host=127.0.0.1 --port=8000",
+    "api:migrate": "php backend/artisan migrate --seed",
+    "api:test": "php backend/artisan test",
+    "api:queue": "php backend/artisan queue:work --tries=3"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
